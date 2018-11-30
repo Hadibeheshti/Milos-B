@@ -1,0 +1,13 @@
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+m_EditorVersion: 2018.3.0b8
+=======
+m_EditorVersion: 2018.3.0b11
+>>>>>>> Stashed changes
+=======
+m_EditorVersion: 2018.3.0b11
+>>>>>>> Stashed changes
+=======
+m_EditorVersion: 2018.3.0b11
+>>>>>>> Stashed changes
