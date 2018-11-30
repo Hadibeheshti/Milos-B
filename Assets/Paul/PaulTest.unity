@@ -1494,7 +1494,7 @@ PrefabInstance:
     - target: {fileID: 7261663703597484943, guid: 5f76188cf8efb5444bf6b89b1e85ff91,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 28.49
+      value: 28.55
       objectReference: {fileID: 0}
     - target: {fileID: 7261663703597484943, guid: 5f76188cf8efb5444bf6b89b1e85ff91,
         type: 3}
@@ -3106,6 +3106,39 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 152c57e11beb8074492f3cf0138a0037, type: 3}
+--- !u!1 &839799634 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7261663703597484931, guid: 5f76188cf8efb5444bf6b89b1e85ff91,
+    type: 3}
+  m_PrefabInstance: {fileID: 508330190}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &839799635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839799634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1e5ac0350223114b908668b6408dec5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.1
+  model: {fileID: 0}
+  turnSpeed: 10
+  jumpPush: 10
+  extraGravity: -20
+  fallMultiplier: 2.5
+  rigid: {fileID: 839799636}
+  PlayerGameObjcet: {fileID: 839799634}
+  enter: 1
+--- !u!54 &839799636 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 2463401762909910398, guid: 5f76188cf8efb5444bf6b89b1e85ff91,
+    type: 3}
+  m_PrefabInstance: {fileID: 508330190}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &843240281 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1286622433483610, guid: c27047632b8665f46b16d14705e40f69,

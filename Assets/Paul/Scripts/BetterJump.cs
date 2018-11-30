@@ -46,9 +46,12 @@ public class BetterJump : MonoBehaviour
     public bool enter = true;
 
  void FixedUpdate() {
-    GetComponent<Rigidbody>().velocity = Vector3.up * jumpPush; 
-     rigid.AddForce((Vector3.up * jumpPush), ForceMode.Impulse);
-     rigid.velocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+     if (Input.GetButtonDown("Jump"))
+     {
+        GetComponent<Rigidbody>().velocity = Vector3.up * jumpPush; 
+        rigid.AddForce((Vector3.up * jumpPush), ForceMode.Impulse);
+        rigid.velocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+     }
     
 }    
     
