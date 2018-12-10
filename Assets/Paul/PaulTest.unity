@@ -3649,6 +3649,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1053593959}
   m_CullTransparentMesh: 0
+--- !u!1 &1068766650 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7261663703597484931, guid: 5f76188cf8efb5444bf6b89b1e85ff91,
+    type: 3}
+  m_PrefabInstance: {fileID: 1155773349}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1068766652 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 2463401762909910398, guid: 5f76188cf8efb5444bf6b89b1e85ff91,
+    type: 3}
+  m_PrefabInstance: {fileID: 1155773349}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1068766655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068766650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 058e3b545d142424fba07640b6342168, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.1
+  model: {fileID: 1502173758}
+  turnSpeed: 10
+  jumpPush: 10
+  extraGravity: 20
+  fallMultiplier: 2.5
+  rigid: {fileID: 1068766652}
+  PlayerGameObjcet: {fileID: 1502173758}
+  enter: 1
 --- !u!1 &1122566645
 GameObject:
   m_ObjectHideFlags: 0
@@ -3917,12 +3950,17 @@ PrefabInstance:
         type: 3}
       propertyPath: rigid
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1068766652}
     - target: {fileID: 2463401762909910399, guid: 5f76188cf8efb5444bf6b89b1e85ff91,
         type: 3}
       propertyPath: PlayerGameObjcet
       value: 
       objectReference: {fileID: 1502173758}
+    - target: {fileID: 2463401762909910399, guid: 5f76188cf8efb5444bf6b89b1e85ff91,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f76188cf8efb5444bf6b89b1e85ff91, type: 3}
 --- !u!1 &1165756882 stripped
@@ -8051,7 +8089,7 @@ PrefabInstance:
     - target: {fileID: 5109719087917730540, guid: 949172d10b728ad4db82c643e3106b0c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -51.3
+      value: -51.95
       objectReference: {fileID: 0}
     - target: {fileID: 5109719087917730540, guid: 949172d10b728ad4db82c643e3106b0c,
         type: 3}
