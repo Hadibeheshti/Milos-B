@@ -32,6 +32,7 @@ public class ChSfx : MonoBehaviour {
 void JumpSound () {
 
 		if (Input.GetKeyDown(KeyCode.Space)) {
+      
         gameObject.GetComponent<AudioSource>().PlayOneShot (sndJump);
 		}
 
