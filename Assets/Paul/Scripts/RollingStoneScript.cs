@@ -12,12 +12,11 @@ public class RollingStoneScript : MonoBehaviour
     public UnityEngine.Vector3 spawnpoint;
 
     //public GameObject RollingStone;  
-
     
 
     void Start()
     {
-        
+        spawnpoint = this.transform.position;
         
         //GameObject newRollingStone = (GameObject)GameObject.Instantiate(RollingStone, transform.position, Quaternion.identity);
     }
@@ -27,8 +26,11 @@ public class RollingStoneScript : MonoBehaviour
     // }
    
     void OnTriggerExit(Collider other){
+        SpawnStone mop = SpawnStone.GetNearest(spawnpoint);
+        if (mop != null)
+                mop.StartCoroutine(mop.Spawn());
+        //Invoke("SetupStone", resetDelay);
         Destroy(this.gameObject);
-        Invoke("SetupStone", resetDelay);
         Debug.Log("invoked");
     }
      void SetupStone()
