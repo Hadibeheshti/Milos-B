@@ -22,6 +22,7 @@ TagManager:
   - Score
   - Coin
   - Water
+  - Water
   layers:
   - Default
   - TransparentFX
