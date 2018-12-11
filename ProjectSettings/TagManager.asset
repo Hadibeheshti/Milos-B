@@ -21,6 +21,9 @@ TagManager:
   - "Schl\xFCsselfragment4"
   - Score
   - Coin
+  - Water
+  - Water
+  - MoveMechanics
   layers:
   - Default
   - TransparentFX
