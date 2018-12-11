@@ -23,6 +23,7 @@ TagManager:
   - Coin
   - Water
   - Water
+  - MoveMechanics
   layers:
   - Default
   - TransparentFX
