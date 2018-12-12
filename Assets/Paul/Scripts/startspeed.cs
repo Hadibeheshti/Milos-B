@@ -10,7 +10,7 @@ public class startspeed : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.AddForce(speed, 0, 0, ForceMode.Impulse);
+        rb.AddForce(0, 0, speed, ForceMode.Impulse);
     }
 
     
