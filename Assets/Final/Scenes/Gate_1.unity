@@ -4037,7 +4037,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &293910151
 Transform:
   m_ObjectHideFlags: 0
@@ -4104,11 +4104,11 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 0
+  m_UseCustomVertexStreams: 1
   m_EnableGPUInstancing: 1
   m_ApplyActiveColorSpace: 1
   m_AllowRoll: 1
-  m_VertexStreams: 00010304
+  m_VertexStreams: 000103040508
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
@@ -4196,9 +4196,9 @@ ParticleSystem:
     enabled: 1
     startLifetime:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 10
-      minScalar: 5
+      minMaxState: 3
+      scalar: 25
+      minScalar: 15
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -4365,8 +4365,8 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     startSize:
       serializedVersion: 2
-      minMaxState: 3
-      scalar: 60
+      minMaxState: 0
+      scalar: 25
       minScalar: 50
       maxCurve:
         serializedVersion: 2
@@ -4418,7 +4418,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeY:
       serializedVersion: 2
-      minMaxState: 3
+      minMaxState: 0
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -4471,7 +4471,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeZ:
       serializedVersion: 2
-      minMaxState: 3
+      minMaxState: 0
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -4682,7 +4682,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 500
+    maxNumParticles: 300
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -4947,7 +4947,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 500
+      scalar: 50
       minScalar: 50
       maxCurve:
         serializedVersion: 2
@@ -5325,8 +5325,8 @@ ParticleSystem:
     curve:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.052359875
-      minScalar: 0.034906585
+      scalar: 0.08726646
+      minScalar: 0.052359875
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -16605,7 +16605,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &854739019
 Transform:
   m_ObjectHideFlags: 0
@@ -19353,7 +19353,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -36830,17 +36830,17 @@ PrefabInstance:
     - target: {fileID: 1086747568192962843, guid: bd3ca335b67a45b48892e373e87ac141,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.5
+      value: 6.39
       objectReference: {fileID: 0}
     - target: {fileID: 1086747568192962843, guid: bd3ca335b67a45b48892e373e87ac141,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.59
+      value: -2.43
       objectReference: {fileID: 0}
     - target: {fileID: 1086747568192962843, guid: bd3ca335b67a45b48892e373e87ac141,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.9931771
+      value: 1.77
       objectReference: {fileID: 0}
     - target: {fileID: 1086747568192962843, guid: bd3ca335b67a45b48892e373e87ac141,
         type: 3}
@@ -37225,11 +37225,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 885412139}
     m_Modifications:
-    - target: {fileID: 7655295471509686659, guid: a6bf0f11a906a6b42a4cd5b2a96f9216,
-        type: 3}
-      propertyPath: m_Name
-      value: StumpMechanic
-      objectReference: {fileID: 0}
     - target: {fileID: 7655295471509460387, guid: a6bf0f11a906a6b42a4cd5b2a96f9216,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -37284,6 +37279,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7655295471509686659, guid: a6bf0f11a906a6b42a4cd5b2a96f9216,
+        type: 3}
+      propertyPath: m_Name
+      value: StumpMechanic
       objectReference: {fileID: 0}
     - target: {fileID: 7655295470555596921, guid: a6bf0f11a906a6b42a4cd5b2a96f9216,
         type: 3}
