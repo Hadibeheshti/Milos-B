@@ -6,9 +6,9 @@ public class CameraFollow : MonoBehaviour
 {
 
     private Transform playerTarget;
-    public float offsetZ = -15f;
-    public float offsetX = -5f;
-    public float constantY = 5f;
+    public float offsetZ = 2f;
+    public float offsetX = 20f;
+    public float constantY = 10f;
     public float cameraLerpTime = 0.05f;
 
     // Start is called before the first frame update
