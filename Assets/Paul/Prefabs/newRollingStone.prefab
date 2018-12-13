@@ -123,6 +123,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 15
   rb: {fileID: 4928935429982112859}
-  newRollingStone: {fileID: 0}
-  RollingStone: {fileID: 0}
+  newRollingStone: {fileID: 4928935429982112857, guid: edb0425c5796f4d45a19925c38357c2c,
+    type: 3}
+  RollingStone: {fileID: 8722147928584903145, guid: e1179b45a7d6034489c70de406122bcf,
+    type: 3}
   resetDelay: 3
+  spawnpoint: {x: 0, y: 0, z: 0}
