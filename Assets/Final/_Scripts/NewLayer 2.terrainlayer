@@ -10,11 +10,7 @@ TerrainLayer:
   m_DiffuseTexture: {fileID: 2800000, guid: 6bb7b6076e4a9924c8a32f33a62e5cae, type: 3}
   m_NormalMapTexture: {fileID: 2800000, guid: 82ef540eb08c8b344b3fc33f73d683f4, type: 3}
   m_MaskMapTexture: {fileID: 0}
-<<<<<<< HEAD
-  m_TileSize: {x: 12, y: 12}
-=======
   m_TileSize: {x: 8, y: 8}
->>>>>>> HadiLocalMaster
   m_TileOffset: {x: 0, y: 0}
   m_Specular: {r: 0, g: 0, b: 0, a: 0}
   m_Metallic: 0
