@@ -6,7 +6,7 @@ public class PlayerAudio : MonoBehaviour
 {
     public AudioClip splashSound;
     public AudioSource audioS;
-
+    public AudioSource MiloRunClip;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -18,6 +18,7 @@ public class PlayerAudio : MonoBehaviour
         }
 
     }
+
 
     private void OnTriggerExit(Collider other)
     {
