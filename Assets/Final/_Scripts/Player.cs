@@ -47,13 +47,15 @@ public class Player : MonoBehaviour
 
     public bool enter = true;
 
+    private Collider playerColid;
+
     // Start is called before the first frame update
     void Start()
     {
         float h = Input.GetAxis("Horizontal");
         rigid = GetComponent<Rigidbody>();
         anim = GetComponentInChildren<Animator>();
-
+        playerColid = GetComponent<Collider>();
 
         
     }
@@ -142,9 +144,11 @@ public class Player : MonoBehaviour
         if (other.gameObject.tag == "Monster")
         {
             anim.SetBool("die", true);
-            
+            //playerColid.isTrigger = true;
+
             die = true;
             Coin.instance.GameOver();
+
 
 
             
