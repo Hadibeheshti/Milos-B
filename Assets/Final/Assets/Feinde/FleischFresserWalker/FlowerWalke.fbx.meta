@@ -1,0 +1,303 @@
+fileFormatVersion: 2
+guid: 8d51aab161287c34a96f103b873d81fa
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: back
+    100002: Fleisch_Joint
+    100004: Fleisch_Joint1
+    100006: Fleisch_Joint10
+    100008: Fleisch_Joint11
+    100010: Fleisch_Joint12
+    100012: Fleisch_Joint13
+    100014: Fleisch_Joint14
+    100016: Fleisch_Joint15
+    100018: Fleisch_Joint16
+    100020: Fleisch_Joint17
+    100022: Fleisch_Joint18
+    100024: Fleisch_Joint19
+    100026: Fleisch_Joint2
+    100028: Fleisch_Joint20
+    100030: Fleisch_Joint21
+    100032: Fleisch_Joint22
+    100034: Fleisch_Joint23
+    100036: Fleisch_Joint24
+    100038: Fleisch_Joint25
+    100040: Fleisch_Joint26
+    100042: Fleisch_Joint27
+    100044: Fleisch_Joint28
+    100046: Fleisch_Joint29
+    100048: Fleisch_Joint3
+    100050: Fleisch_Joint30
+    100052: Fleisch_Joint31
+    100054: Fleisch_Joint32
+    100056: Fleisch_Joint33
+    100058: Fleisch_Joint34
+    100060: Fleisch_Joint35
+    100062: Fleisch_Joint36
+    100064: Fleisch_Joint37
+    100066: Fleisch_Joint38
+    100068: Fleisch_Joint39
+    100070: Fleisch_Joint4
+    100072: Fleisch_Joint40
+    100074: Fleisch_Joint41
+    100076: Fleisch_Joint42
+    100078: Fleisch_Joint43
+    100080: Fleisch_Joint44
+    100082: Fleisch_Joint45
+    100084: Fleisch_Joint46
+    100086: Fleisch_Joint47
+    100088: Fleisch_Joint48
+    100090: Fleisch_Joint49
+    100092: Fleisch_Joint5
+    100094: Fleisch_Joint50
+    100096: Fleisch_Joint51
+    100098: Fleisch_Joint52
+    100100: Fleisch_Joint53
+    100102: Fleisch_Joint54
+    100104: Fleisch_Joint55
+    100106: Fleisch_Joint56
+    100108: Fleisch_Joint57
+    100110: Fleisch_Joint58
+    100112: Fleisch_Joint59
+    100114: Fleisch_Joint6
+    100116: Fleisch_Joint60
+    100118: Fleisch_Joint61
+    100120: Fleisch_Joint62
+    100122: Fleisch_Joint63
+    100124: Fleisch_Joint64
+    100126: Fleisch_Joint65
+    100128: Fleisch_Joint66
+    100130: Fleisch_Joint67
+    100132: Fleisch_Joint68
+    100134: Fleisch_Joint69
+    100136: Fleisch_Joint7
+    100138: Fleisch_Joint70
+    100140: Fleisch_Joint71
+    100142: Fleisch_Joint72
+    100144: Fleisch_Joint73
+    100146: Fleisch_Joint74
+    100148: Fleisch_Joint75
+    100150: Fleisch_Joint8
+    100152: Fleisch_Joint9
+    100154: //RootNode
+    100156: FlowerWalkerMesh8
+    100158: group5
+    100160: group6
+    100162: ikHandle7
+    100164: ikHandle8
+    400000: back
+    400002: Fleisch_Joint
+    400004: Fleisch_Joint1
+    400006: Fleisch_Joint10
+    400008: Fleisch_Joint11
+    400010: Fleisch_Joint12
+    400012: Fleisch_Joint13
+    400014: Fleisch_Joint14
+    400016: Fleisch_Joint15
+    400018: Fleisch_Joint16
+    400020: Fleisch_Joint17
+    400022: Fleisch_Joint18
+    400024: Fleisch_Joint19
+    400026: Fleisch_Joint2
+    400028: Fleisch_Joint20
+    400030: Fleisch_Joint21
+    400032: Fleisch_Joint22
+    400034: Fleisch_Joint23
+    400036: Fleisch_Joint24
+    400038: Fleisch_Joint25
+    400040: Fleisch_Joint26
+    400042: Fleisch_Joint27
+    400044: Fleisch_Joint28
+    400046: Fleisch_Joint29
+    400048: Fleisch_Joint3
+    400050: Fleisch_Joint30
+    400052: Fleisch_Joint31
+    400054: Fleisch_Joint32
+    400056: Fleisch_Joint33
+    400058: Fleisch_Joint34
+    400060: Fleisch_Joint35
+    400062: Fleisch_Joint36
+    400064: Fleisch_Joint37
+    400066: Fleisch_Joint38
+    400068: Fleisch_Joint39
+    400070: Fleisch_Joint4
+    400072: Fleisch_Joint40
+    400074: Fleisch_Joint41
+    400076: Fleisch_Joint42
+    400078: Fleisch_Joint43
+    400080: Fleisch_Joint44
+    400082: Fleisch_Joint45
+    400084: Fleisch_Joint46
+    400086: Fleisch_Joint47
+    400088: Fleisch_Joint48
+    400090: Fleisch_Joint49
+    400092: Fleisch_Joint5
+    400094: Fleisch_Joint50
+    400096: Fleisch_Joint51
+    400098: Fleisch_Joint52
+    400100: Fleisch_Joint53
+    400102: Fleisch_Joint54
+    400104: Fleisch_Joint55
+    400106: Fleisch_Joint56
+    400108: Fleisch_Joint57
+    400110: Fleisch_Joint58
+    400112: Fleisch_Joint59
+    400114: Fleisch_Joint6
+    400116: Fleisch_Joint60
+    400118: Fleisch_Joint61
+    400120: Fleisch_Joint62
+    400122: Fleisch_Joint63
+    400124: Fleisch_Joint64
+    400126: Fleisch_Joint65
+    400128: Fleisch_Joint66
+    400130: Fleisch_Joint67
+    400132: Fleisch_Joint68
+    400134: Fleisch_Joint69
+    400136: Fleisch_Joint7
+    400138: Fleisch_Joint70
+    400140: Fleisch_Joint71
+    400142: Fleisch_Joint72
+    400144: Fleisch_Joint73
+    400146: Fleisch_Joint74
+    400148: Fleisch_Joint75
+    400150: Fleisch_Joint8
+    400152: Fleisch_Joint9
+    400154: //RootNode
+    400156: FlowerWalkerMesh8
+    400158: group5
+    400160: group6
+    400162: ikHandle7
+    400164: ikHandle8
+    2000000: back
+    2100000: FlowerWalker_Mat
+    2100002: FlowerWalker_Leafs_Mat
+    4300000: FlowerWalkerMesh8
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: FlowerWalkerMesh8
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FlowerWalker_Leafs_Mat
+    second: {fileID: 2100000, guid: 604c1421641f05746a5678a3e14c3f76, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FlowerWalker_Mat
+    second: {fileID: 2100000, guid: 1c853c883951b0641949ca0bf221400c, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 38
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
