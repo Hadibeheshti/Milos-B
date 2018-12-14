@@ -2055,7 +2055,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7607844, g: 0.7607844, b: 0.7607844, a: 0}
+  m_Color: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3055,6 +3055,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sndDie: {fileID: 8300000, guid: 4d9e840d5d53e914caa37931988ee0d6, type: 3}
   sndJump: {fileID: 8300000, guid: 653fff6be2887114ca043a6044cf8ea3, type: 3}
+  RollerStone: {fileID: 0}
+  MiloRunClip: {fileID: 0}
 --- !u!82 &2003991212
 AudioSource:
   m_ObjectHideFlags: 0

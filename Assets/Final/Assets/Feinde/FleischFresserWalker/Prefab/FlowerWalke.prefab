@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 6206632884917920165}
   - component: {fileID: 6206632884917920164}
   m_Layer: 0
-  m_Name: FlowerWalke_A
+  m_Name: FlowerWalke
   m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -134,8 +134,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.13285317, y: 0.14134517, z: 0.23568133}
-  m_Center: {x: -0.0024314993, y: 0.07763053, z: -0.025945904}
+  m_Size: {x: 0.13285317, y: 0.11087084, z: 0.17201063}
+  m_Center: {x: -0.0024314993, y: 0.062393364, z: -0.03281252}
 --- !u!1 &6206632886290470469
 GameObject:
   m_ObjectHideFlags: 0
