@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawnStone : MonoBehaviour
 {
     public static List<SpawnStone> stones = new List<SpawnStone>();
-   public GameObject rollingStone;
+   public GameObject rollerStone;
     // IEnumerator Start() {
         
     //     yield return new WaitForSeconds(2f);
@@ -19,7 +19,7 @@ public class SpawnStone : MonoBehaviour
    public IEnumerator Spawn()
     {
         yield return new WaitForSeconds(2f);
-        Instantiate(rollingStone, transform.position, Quaternion.identity);
+        Instantiate(rollerStone, transform.position, Quaternion.identity);
         Debug.Log("waited for 2 sec");
     }
 
