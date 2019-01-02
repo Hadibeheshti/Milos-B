@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     /// Lauf Geschwindigkeigt der Figur
     /// </summary>
     public float speed = 0.1f;
+    [SerializeField] float myRaycastLength = 1;
     /// <summary>
     /// Das grafische Model, u.a. für die Drehung in Laufrichtung.
     /// </summary>
@@ -46,13 +47,15 @@ public class Player : MonoBehaviour
 
     public bool enter = true;
 
+    private Collider playerColid;
+
     // Start is called before the first frame update
     void Start()
     {
         float h = Input.GetAxis("Horizontal");
         rigid = GetComponent<Rigidbody>();
         anim = GetComponentInChildren<Animator>();
-
+        playerColid = GetComponent<Collider>();
 
         
     }
@@ -116,7 +119,8 @@ public class Player : MonoBehaviour
      {
          if (die ==false){
             RaycastHit hitInfo;
-            onGround = Physics.Raycast(transform.position + (Vector3.up * 0.05f), Vector3.down, out hitInfo, 0.05f);
+            Debug.DrawRay(transform.position + (Vector3.up * 0.05f), Vector3.down, Color.cyan, myRaycastLength);
+            onGround = Physics.Raycast(transform.position + (Vector3.up * 0.05f), Vector3.down, out hitInfo, myRaycastLength);
         anim.SetBool("grounded", onGround);
 }
             if (Input.GetAxis("Jump") > 0f && onGround && die ==false)
@@ -140,9 +144,11 @@ public class Player : MonoBehaviour
         if (other.gameObject.tag == "Monster")
         {
             anim.SetBool("die", true);
-            
+            //playerColid.isTrigger = true;
+
             die = true;
             Coin.instance.GameOver();
+
 
 
             
