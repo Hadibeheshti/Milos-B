@@ -1,0 +1,188 @@
+fileFormatVersion: 2
+guid: 362e1bf3ae53fcd4eb287cec3d9b01e9
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: AugenFlanzeJ
+    100004: AugenFlanzeJ1
+    100006: AugenFlanzeJ10
+    100008: AugenFlanzeJ11
+    100010: AugenFlanzeJ12
+    100012: AugenFlanzeJ13
+    100014: AugenFlanzeJ14
+    100016: AugenFlanzeJ15
+    100018: AugenFlanzeJ16
+    100020: AugenFlanzeJ17
+    100022: AugenFlanzeJ18
+    100024: AugenFlanzeJ19
+    100026: AugenFlanzeJ2
+    100028: AugenFlanzeJ20
+    100030: AugenFlanzeJ21
+    100032: AugenFlanzeJ22
+    100034: AugenFlanzeJ23
+    100036: AugenFlanzeJ24
+    100038: AugenFlanzeJ25
+    100040: AugenFlanzeJ26
+    100042: AugenFlanzeJ27
+    100044: AugenFlanzeJ28
+    100046: AugenFlanzeJ29
+    100048: AugenFlanzeJ3
+    100050: AugenFlanzeJ30
+    100052: AugenFlanzeJ31
+    100054: AugenFlanzeJ32
+    100056: AugenFlanzeJ33
+    100058: AugenFlanzeJ34
+    100060: AugenFlanzeJ35
+    100062: AugenFlanzeJ36
+    100064: AugenFlanzeJ37
+    100066: AugenFlanzeJ38
+    100068: AugenFlanzeJ39
+    100070: AugenFlanzeJ4
+    100072: AugenFlanzeJ5
+    100074: AugenFlanzeJ6
+    100076: AugenFlanzeJ7
+    100078: AugenFlanzeJ8
+    100080: AugenFlanzeJ9
+    100082: AugenPflanze
+    100084: joint1
+    400000: //RootNode
+    400002: AugenFlanzeJ
+    400004: AugenFlanzeJ1
+    400006: AugenFlanzeJ10
+    400008: AugenFlanzeJ11
+    400010: AugenFlanzeJ12
+    400012: AugenFlanzeJ13
+    400014: AugenFlanzeJ14
+    400016: AugenFlanzeJ15
+    400018: AugenFlanzeJ16
+    400020: AugenFlanzeJ17
+    400022: AugenFlanzeJ18
+    400024: AugenFlanzeJ19
+    400026: AugenFlanzeJ2
+    400028: AugenFlanzeJ20
+    400030: AugenFlanzeJ21
+    400032: AugenFlanzeJ22
+    400034: AugenFlanzeJ23
+    400036: AugenFlanzeJ24
+    400038: AugenFlanzeJ25
+    400040: AugenFlanzeJ26
+    400042: AugenFlanzeJ27
+    400044: AugenFlanzeJ28
+    400046: AugenFlanzeJ29
+    400048: AugenFlanzeJ3
+    400050: AugenFlanzeJ30
+    400052: AugenFlanzeJ31
+    400054: AugenFlanzeJ32
+    400056: AugenFlanzeJ33
+    400058: AugenFlanzeJ34
+    400060: AugenFlanzeJ35
+    400062: AugenFlanzeJ36
+    400064: AugenFlanzeJ37
+    400066: AugenFlanzeJ38
+    400068: AugenFlanzeJ39
+    400070: AugenFlanzeJ4
+    400072: AugenFlanzeJ5
+    400074: AugenFlanzeJ6
+    400076: AugenFlanzeJ7
+    400078: AugenFlanzeJ8
+    400080: AugenFlanzeJ9
+    400082: AugenPflanze
+    400084: joint1
+    2100000: AugenPflanze_mat
+    4300000: AugenPflanze
+    7400000: Take 001
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: AugenPflanze
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: AugenPflanze_mat
+    second: {fileID: 2100000, guid: 6b75e084eb5fc8d47835684c07be1f74, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
