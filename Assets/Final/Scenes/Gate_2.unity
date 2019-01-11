@@ -123,6 +123,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_C_1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: de31daf2284ed204eae61a4eee18c9c1, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: de31daf2284ed204eae61a4eee18c9c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.65
@@ -195,6 +199,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 93bf319ad226546428784ff4422f2b1a, type: 3}
       propertyPath: m_Name
       value: Stone_C_5 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 93bf319ad226546428784ff4422f2b1a, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 93bf319ad226546428784ff4422f2b1a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2642,6 +2650,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_B_3 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4a1cf4476807f9f4daa601e9800e574d, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4a1cf4476807f9f4daa601e9800e574d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.24
@@ -3254,6 +3266,50 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1449027229}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &152719750
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 152719752}
+  - component: {fileID: 152719751}
+  m_Layer: 0
+  m_Name: Area
+  m_TagString: JumpingArea
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &152719751
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152719750}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &152719752
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152719750}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.03, z: 46.2}
+  m_LocalScale: {x: 2.6028, y: 0.11463, z: 86.67573}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &155967407
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3377,6 +3433,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_C_1 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: de31daf2284ed204eae61a4eee18c9c1, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: de31daf2284ed204eae61a4eee18c9c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.5
@@ -3461,6 +3521,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 529b7d913db64674dbbc4d0cbcd220ac, type: 3}
       propertyPath: m_Name
       value: Stone_C_4 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 529b7d913db64674dbbc4d0cbcd220ac, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 529b7d913db64674dbbc4d0cbcd220ac, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4170,6 +4234,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_B_3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4a1cf4476807f9f4daa601e9800e574d, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4a1cf4476807f9f4daa601e9800e574d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.65
@@ -4285,6 +4353,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 4a1cf4476807f9f4daa601e9800e574d, type: 3}
       propertyPath: m_Name
       value: Stone_B_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4a1cf4476807f9f4daa601e9800e574d, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4a1cf4476807f9f4daa601e9800e574d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4581,9 +4653,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_C_4 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 529b7d913db64674dbbc4d0cbcd220ac, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 529b7d913db64674dbbc4d0cbcd220ac, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.45
+      value: 17.72
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 529b7d913db64674dbbc4d0cbcd220ac, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4591,7 +4667,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 529b7d913db64674dbbc4d0cbcd220ac, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 12.94
+      value: 13.38
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 529b7d913db64674dbbc4d0cbcd220ac, type: 3}
       propertyPath: m_LocalRotation.x
@@ -9774,6 +9850,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_B_3 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4a1cf4476807f9f4daa601e9800e574d, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4a1cf4476807f9f4daa601e9800e574d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1
@@ -10933,6 +11013,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 1d2a2097299d1964db856fe614323655, type: 3}
       propertyPath: m_Name
       value: Stone_C_2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1d2a2097299d1964db856fe614323655, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1d2a2097299d1964db856fe614323655, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13362,6 +13446,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_B_1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 11e669d701883b44ea4bfbb1e6f8bec2, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 11e669d701883b44ea4bfbb1e6f8bec2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 19.74
@@ -13802,6 +13890,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_C_1 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: de31daf2284ed204eae61a4eee18c9c1, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: de31daf2284ed204eae61a4eee18c9c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 19.5
@@ -14012,6 +14104,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_C_5 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 93bf319ad226546428784ff4422f2b1a, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 93bf319ad226546428784ff4422f2b1a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.5
@@ -14084,6 +14180,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 4a1cf4476807f9f4daa601e9800e574d, type: 3}
       propertyPath: m_Name
       value: Stone_B_3 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4a1cf4476807f9f4daa601e9800e574d, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4a1cf4476807f9f4daa601e9800e574d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14319,6 +14419,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 93bf319ad226546428784ff4422f2b1a, type: 3}
       propertyPath: m_Name
       value: Stone_C_5 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 93bf319ad226546428784ff4422f2b1a, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 93bf319ad226546428784ff4422f2b1a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15854,6 +15958,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_B_1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 11e669d701883b44ea4bfbb1e6f8bec2, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 11e669d701883b44ea4bfbb1e6f8bec2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.18
@@ -16007,6 +16115,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 1d2a2097299d1964db856fe614323655, type: 3}
       propertyPath: m_Name
       value: Stone_C_2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1d2a2097299d1964db856fe614323655, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1d2a2097299d1964db856fe614323655, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16751,6 +16863,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_B_1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 11e669d701883b44ea4bfbb1e6f8bec2, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 11e669d701883b44ea4bfbb1e6f8bec2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.38
@@ -17086,6 +17202,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 1d2a2097299d1964db856fe614323655, type: 3}
       propertyPath: m_Name
       value: Stone_C_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1d2a2097299d1964db856fe614323655, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1d2a2097299d1964db856fe614323655, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17942,6 +18062,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_B_3 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4a1cf4476807f9f4daa601e9800e574d, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4a1cf4476807f9f4daa601e9800e574d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.2
@@ -18175,6 +18299,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 37027e739010c7245a12a98cb050ce27, type: 3}
       propertyPath: m_Name
       value: Stone_Serie_A_5
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 37027e739010c7245a12a98cb050ce27, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 37027e739010c7245a12a98cb050ce27, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19564,6 +19692,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 68d1aec3099437846bfdf8b88857f5df, type: 3}
       propertyPath: m_Name
       value: Stone_Serie_A_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 68d1aec3099437846bfdf8b88857f5df, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68d1aec3099437846bfdf8b88857f5df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21144,7 +21276,7 @@ PrefabInstance:
     - target: {fileID: 7327156838263665859, guid: ee03f54e05e32234299396e519cfd64b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7327156838263665859, guid: ee03f54e05e32234299396e519cfd64b,
         type: 3}
@@ -21325,6 +21457,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 89285e5629aa3bf46b0f9fcc645df7bf, type: 3}
       propertyPath: m_Name
       value: Stone_Serie_A_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 89285e5629aa3bf46b0f9fcc645df7bf, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 89285e5629aa3bf46b0f9fcc645df7bf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21784,7 +21920,7 @@ TerrainCollider:
   m_Material: {fileID: 0}
   m_Enabled: 1
   m_TerrainData: {fileID: 15600000, guid: 319e8b227ab92094495e67eb8708847c, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &974274371
 Terrain:
   m_ObjectHideFlags: 0
@@ -22583,6 +22719,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_Serie_A_1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b97de2a4ac0fa3b429d71e4cfa0eedb5, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b97de2a4ac0fa3b429d71e4cfa0eedb5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.977089
@@ -22817,12 +22957,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1010801245}
   m_LocalRotation: {x: -0.024497908, y: 0.73758495, z: -0.023527259, w: -0.67439955}
-  m_LocalPosition: {x: 23.18, y: 3.56, z: 2.27}
+  m_LocalPosition: {x: 23.18, y: 3.6599998, z: 4.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1545867880}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 3.8850002, y: -95.133, z: -0.25300002}
 --- !u!1001 &1011519572
 PrefabInstance:
@@ -23340,6 +23480,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 855df6957f85e194e8681c2086e5c1a2, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 855df6957f85e194e8681c2086e5c1a2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 19.706257
@@ -23577,6 +23721,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1037064461
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1037064462}
+  - component: {fileID: 1037064463}
+  m_Layer: 0
+  m_Name: Area
+  m_TagString: WallJumpingArea
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1037064462
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037064461}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.54}
+  m_LocalScale: {x: 1, y: 1, z: 0.06726632}
+  m_Children: []
+  m_Father: {fileID: 1309759644}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1037064463
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037064461}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1044579089 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 4a1cf4476807f9f4daa601e9800e574d,
@@ -24202,6 +24390,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_C_1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: de31daf2284ed204eae61a4eee18c9c1, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: de31daf2284ed204eae61a4eee18c9c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.13
@@ -24379,13 +24571,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_C_5
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 93bf319ad226546428784ff4422f2b1a, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 93bf319ad226546428784ff4422f2b1a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 93bf319ad226546428784ff4422f2b1a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.69
+      value: -0.577
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 93bf319ad226546428784ff4422f2b1a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -25438,6 +25634,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 93bf319ad226546428784ff4422f2b1a, type: 3}
       propertyPath: m_Name
       value: Stone_C_5 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 93bf319ad226546428784ff4422f2b1a, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 93bf319ad226546428784ff4422f2b1a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -27536,11 +27736,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1252211678}
   m_LocalRotation: {x: -0.024497908, y: 0.73758495, z: -0.023527259, w: -0.67439955}
-  m_LocalPosition: {x: 23.18, y: 3.56, z: 2.27}
+  m_LocalPosition: {x: 23.18, y: 3.6599998, z: 4.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 18.784, y: -90.00001, z: 0}
 --- !u!81 &1252211680
 AudioListener:
@@ -27975,6 +28175,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: de31daf2284ed204eae61a4eee18c9c1, type: 3}
       propertyPath: m_Name
       value: Stone_C_1 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: de31daf2284ed204eae61a4eee18c9c1, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: de31daf2284ed204eae61a4eee18c9c1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -28425,7 +28629,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1f934650bcd6876428861f3080d36dae, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1f934650bcd6876428861f3080d36dae, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -28451,6 +28655,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: b7ca42307c4ce144a813bbd91af655bf, type: 3}
       propertyPath: m_Name
       value: Stone_Serie_A_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b7ca42307c4ce144a813bbd91af655bf, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b7ca42307c4ce144a813bbd91af655bf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -28729,6 +28937,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_C_4
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 529b7d913db64674dbbc4d0cbcd220ac, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 529b7d913db64674dbbc4d0cbcd220ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.92
@@ -28919,6 +29131,98 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: d046f489b6d5dfe4f99a1d1625c8ac1f, type: 3}
+--- !u!1 &1309759640
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1309759644}
+  - component: {fileID: 1309759643}
+  - component: {fileID: 1309759642}
+  - component: {fileID: 1309759641}
+  m_Layer: 0
+  m_Name: wall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1309759641
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309759640}
+  m_Material: {fileID: 13400000, guid: 6c6cc46a1c126794cb1e67298543fca3, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1309759642
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309759640}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1309759643
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309759640}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1309759644
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309759640}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.23, y: 3.34, z: 10.59}
+  m_LocalScale: {x: 1.9546, y: 7.3006372, z: 0.9844}
+  m_Children:
+  - {fileID: 1037064462}
+  m_Father: {fileID: 0}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1309835359
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28929,6 +29233,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 93bf319ad226546428784ff4422f2b1a, type: 3}
       propertyPath: m_Name
       value: Stone_C_5 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 93bf319ad226546428784ff4422f2b1a, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 93bf319ad226546428784ff4422f2b1a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -29003,6 +29311,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_C_1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: de31daf2284ed204eae61a4eee18c9c1, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: de31daf2284ed204eae61a4eee18c9c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.42
@@ -29076,9 +29388,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_C_3
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 78235606dd995a4448d3e8d4ba2be092, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 78235606dd995a4448d3e8d4ba2be092, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.7
+      value: 17.97
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 78235606dd995a4448d3e8d4ba2be092, type: 3}
       propertyPath: m_LocalPosition.y
@@ -29086,7 +29402,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 78235606dd995a4448d3e8d4ba2be092, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.72
+      value: 7.1600003
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 78235606dd995a4448d3e8d4ba2be092, type: 3}
       propertyPath: m_LocalRotation.x
@@ -29531,6 +29847,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_C_5 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 93bf319ad226546428784ff4422f2b1a, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 93bf319ad226546428784ff4422f2b1a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.5
@@ -29715,6 +30035,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: de31daf2284ed204eae61a4eee18c9c1, type: 3}
       propertyPath: m_Name
       value: Stone_C_1 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: de31daf2284ed204eae61a4eee18c9c1, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: de31daf2284ed204eae61a4eee18c9c1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30900,6 +31224,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_C_1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: de31daf2284ed204eae61a4eee18c9c1, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: de31daf2284ed204eae61a4eee18c9c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 18.625248
@@ -31675,6 +32003,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_C_1 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: de31daf2284ed204eae61a4eee18c9c1, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: de31daf2284ed204eae61a4eee18c9c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.3
@@ -31979,6 +32311,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 93bf319ad226546428784ff4422f2b1a, type: 3}
       propertyPath: m_Name
       value: Stone_C_5 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 93bf319ad226546428784ff4422f2b1a, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 93bf319ad226546428784ff4422f2b1a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -38712,6 +39048,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stone_C_5 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 93bf319ad226546428784ff4422f2b1a, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 93bf319ad226546428784ff4422f2b1a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.5
@@ -41870,7 +42210,7 @@ GameObject:
   - component: {fileID: 2067821557}
   m_Layer: 0
   m_Name: stones
-  m_TagString: Untagged
+  m_TagString: JumpingArea
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44470,10 +44810,23 @@ PrefabInstance:
       propertyPath: Loop
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2684889564233267991, guid: 4b3f7e86f4133c44ca43b713ad14cc4b,
         type: 3}
       propertyPath: m_Name
       value: Player_Prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 2684889564233267991, guid: 4b3f7e86f4133c44ca43b713ad14cc4b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 2684889564233267995, guid: 4b3f7e86f4133c44ca43b713ad14cc4b,
         type: 3}
@@ -44483,12 +44836,12 @@ PrefabInstance:
     - target: {fileID: 2684889564233267995, guid: 4b3f7e86f4133c44ca43b713ad14cc4b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2684889564233267995, guid: 4b3f7e86f4133c44ca43b713ad14cc4b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1.91
       objectReference: {fileID: 0}
     - target: {fileID: 2684889564233267995, guid: 4b3f7e86f4133c44ca43b713ad14cc4b,
         type: 3}
@@ -44513,7 +44866,7 @@ PrefabInstance:
     - target: {fileID: 2684889564233267995, guid: 4b3f7e86f4133c44ca43b713ad14cc4b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2684889564233267995, guid: 4b3f7e86f4133c44ca43b713ad14cc4b,
         type: 3}
@@ -44545,16 +44898,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 2.0898118
       objectReference: {fileID: 0}
-    - target: {fileID: 2684889564233267993, guid: 4b3f7e86f4133c44ca43b713ad14cc4b,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2684889564233267993, guid: 4b3f7e86f4133c44ca43b713ad14cc4b,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7182109618361877578, guid: 4b3f7e86f4133c44ca43b713ad14cc4b,
         type: 3}
       propertyPath: m_Constraints
@@ -44569,6 +44912,26 @@ PrefabInstance:
         type: 3}
       propertyPath: speed
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7182109618361877576, guid: 4b3f7e86f4133c44ca43b713ad14cc4b,
+        type: 3}
+      propertyPath: acceleration
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7182109618361877576, guid: 4b3f7e86f4133c44ca43b713ad14cc4b,
+        type: 3}
+      propertyPath: jumpingSpeed
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7182109618361877576, guid: 4b3f7e86f4133c44ca43b713ad14cc4b,
+        type: 3}
+      propertyPath: jumpDuraition
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 7182109618361877576, guid: 4b3f7e86f4133c44ca43b713ad14cc4b,
+        type: 3}
+      propertyPath: horizontalWallJumpingSpeed
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7182109618411720793, guid: 4b3f7e86f4133c44ca43b713ad14cc4b,
         type: 3}
@@ -45024,6 +45387,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 1.2209064
+      objectReference: {fileID: 0}
+    - target: {fileID: 2684889563312693437, guid: 4b3f7e86f4133c44ca43b713ad14cc4b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b3f7e86f4133c44ca43b713ad14cc4b, type: 3}

@@ -23,6 +23,8 @@ TagManager:
   - Coin
   - Water
   - MoveMechanics
+  - JumpingArea
+  - WallJumpingArea
   layers:
   - Default
   - TransparentFX
