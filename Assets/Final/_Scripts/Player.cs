@@ -44,7 +44,7 @@ public class Player : MonoBehaviour
             GetComponent<Rigidbody>().velocity = new Vector3(
             GetComponent<Rigidbody>().velocity.x,
             GetComponent<Rigidbody>().velocity.y, 
-            movementSpeed);
+            speed);
         //Check for Inputs.
 
         bool pressingJumpButton = Input.GetMouseButton(0) || Input.GetKey("space");
