@@ -22,16 +22,17 @@ public class PatrollingEnemy : Enemy
     protected virtual void Update()
     {
         transform.position = new Vector3(
-            transform.position.x + speed * Time.deltaTime * (movingLeft ? -1 : 1),
+            transform.position.x,
             transform.position.y,
-            transform.position.z
+            transform.position.z + speed * Time.deltaTime * (movingLeft ? -1 : 1)
+           
         );
 
-        if (movingLeft == true && transform.position.x < initialPosition.x - movementAmplitude / 2)
+        if (movingLeft == true && transform.position.z < initialPosition.z - movementAmplitude / 2)
         {
             movingLeft = false;
         }
-        else if (movingLeft == false && transform.position.x > initialPosition.x + movementAmplitude / 2)
+        else if (movingLeft == false && transform.position.z > initialPosition.z + movementAmplitude / 2)
         {
             movingLeft = true;
         }
