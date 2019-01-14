@@ -1,23 +1,55 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Player : MonoBehaviour
 {   
     //Publics
+    [Header("Accelerations")]
     public float acceleration = 2.5f;
-    public float movementSpeed = 4f;
-    public float jumpingSpeed = 0f;
-    public float jumpDuraition = 0.35f;
-    public float verticalWallJumpingSpeed = 5f;
+    public float deacceleration = 5.0f;
+
+    [Header("Movement Fields")]
+    [Range (4f, 6f)]
+    public float movementSpeed = 4.0f;
+    [Range(0f, 12f)]
+    public float movementSpeedRight = 8.0f;
+    [Range(0f, 12f)]
+    public float movementSpeedLeft = 2.0f;
+
+    [Header("Jumping Fields")]
+    [Range(0f, 12f)]
+    public float normalJumpingSpeed = 6.0f;
+    [Range(0f, 12f)]
+    public float longJumpingSpeed = 10.0f;
+    [Range(0f, 12f)]
+    public float jumpDuraition = 0.75f;
+    [Range(0f, 12f)]
+    public float verticalWallJumpingSpeed = 5.0f;
+    [Range(0f, 12f)] 
     public float horizontalWallJumpingSpeed = 3.5f;
     //privates
-    private float jumpingTimer = 0f;
-    private float speed = 0f;
+    private bool dead = false;
+    private float jumpingTimer = 0.0f;
+    private float speed = 0.0f;
+    private float jumpingSpeed = 0f;
     private bool canJump = false;
     private bool jumping = false;
     private bool canWallJump = false;
     private bool wallJumpLeft = false;
+    private bool onSpeedAreaLeft = false;
+    private bool onSpeedAreaRight = false;
+    private bool onLongJumpBlock = false;
+    public bool Dead
+    {
+        get
+        {
+            return dead;
+
+        }
+
+    }
    
 
 
@@ -26,19 +58,37 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
+        jumpingSpeed = normalJumpingSpeed;
         
     }
 
     void Update()
-
-
-
-
-    {   //Accelerate the Player.
-        speed += acceleration * Time.deltaTime;
-        if (speed > movementSpeed)
+    {
+        if (dead)
         {
-            speed = movementSpeed;
+            return;
+        }
+        //Accelerate the Player.
+        speed += acceleration * Time.deltaTime;
+
+        float targetMovementSpeed = movementSpeed;
+        if (onSpeedAreaLeft)
+        {
+            targetMovementSpeed = movementSpeedLeft;
+        }
+
+        else if (onSpeedAreaRight)
+        {
+            targetMovementSpeed = movementSpeedRight;
+        }
+
+
+
+
+        if (speed > targetMovementSpeed)
+        {
+            speed -= deacceleration * Time.deltaTime;
+           
         }
         //Move horizontally.
             GetComponent<Rigidbody>().velocity = new Vector3(
@@ -63,6 +113,10 @@ public class Player : MonoBehaviour
 
             if (pressingJumpButton && jumpingTimer < jumpDuraition)
             {
+                    if (onLongJumpBlock == true)
+                    {
+                        jumpingSpeed = longJumpingSpeed;
+                    }
                 GetComponent<Rigidbody>().velocity = new Vector3(
                 GetComponent<Rigidbody>().velocity.x,
                 jumpingSpeed,
@@ -96,6 +150,47 @@ public class Player : MonoBehaviour
 
     }
 
+    private void OnTriggerEnter(Collider otherCollider)
+    {
+        // Speed up or down.
+        if (otherCollider.GetComponent<SpeedArea>() != null)
+        {
+            SpeedArea speedArea = otherCollider.GetComponent<SpeedArea>();
+            if (speedArea.direction == Direction.Left)
+            {
+                onSpeedAreaLeft = true;
+            }
+            else if (speedArea.direction == Direction.Right)
+            {
+                onSpeedAreaRight = true;
+            }
+
+        }
+        // Perform long jump.
+        if (otherCollider.GetComponent<LongJumpBlocks>() != null)
+
+        {
+            onLongJumpBlock = true;
+
+        }
+
+        //kill the player when they the Enemy.
+
+        if (otherCollider.GetComponent<Enemy>() != null)
+        {
+            Kill();
+
+        }
+
+
+
+
+    }
+
+
+
+
+
 
     void OnTriggerStay(Collider otherCollider)
 
@@ -104,6 +199,7 @@ public class Player : MonoBehaviour
         {
             canJump = true;
             jumping = false;
+            jumpingSpeed = normalJumpingSpeed;
             jumpingTimer = 0f;
 
 
@@ -113,9 +209,52 @@ public class Player : MonoBehaviour
             canWallJump = true;
             wallJumpLeft = transform.position.z < otherCollider.transform.position.z;
         }
+
+       
+    }
+
+    private void OnTriggerExit(Collider otherCollider)
+    {
+        if (otherCollider.tag == "WallJumpingArea")
+        {
+            canWallJump = false;
+        }
+        if (otherCollider.GetComponent<SpeedArea> () !=null)
+        {
+                    
+        SpeedArea speedArea = otherCollider.GetComponent<SpeedArea>();
+
+        if (speedArea.direction == Direction.Left)
+        {
+            onSpeedAreaLeft = false;
+        }
+        else if (speedArea.direction == Direction.Right)
+        {
+            onSpeedAreaRight = false;
+        }
+
+
+    }
+
+        if (otherCollider.GetComponent<LongJumpBlocks>() != null)
+
+        {
+            onLongJumpBlock = false;
+
+        }
+
     }
 
 
+    void Kill ()
+    {
+        dead = true;
+        GetComponent<Collider>().enabled = false;
+        GetComponent<Rigidbody>().velocity = Vector3.zero;
+        GetComponent<Rigidbody>().AddForce(new Vector3(0f, 500f, -50f));
+
+
+    }
 }
 
 

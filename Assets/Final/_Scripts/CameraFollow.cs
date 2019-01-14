@@ -5,27 +5,19 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
 
-    private Transform playerTarget;
-    public float offsetZ = 2f;
-    public float offsetX = 20f;
-    public float constantY = 10f;
-    public float cameraLerpTime = 0.05f;
+    public GameObject target;
+    public Vector3 offset;
+    public float speed = 5f;
 
-    // Start is called before the first frame update
-    void Awake(){ 
-        
-       playerTarget = GameObject.FindGameObjectWithTag (Tags.PLAYER_TAG).transform; 
-
-    }
-
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if (playerTarget) {
-			Vector3 targetPosition = new Vector3 (playerTarget.position.x + offsetX,
-				constantY, playerTarget.position.z + offsetZ);
-			transform.position = Vector3.Lerp (transform.position, targetPosition, cameraLerpTime);
-		}
-        
+
+        Player player = target.GetComponent<Player>();
+
+        if (player.Dead == false)
+        {
+            Vector3 targetPosition = new Vector3(player.transform.position.x + offset.x, player.transform.position.y + offset.y, transform.position.z);
+            transform.position = Vector3.Lerp(transform.position, targetPosition, speed * Time.deltaTime);
+        }
     }
 }
