@@ -19,9 +19,15 @@ public class testPlayer : MonoBehaviour
     void Update()
     {
         speed += acceleration * Time.deltaTime;
+<<<<<<< HEAD
         if (speed > movementSpeed)
         {
             speed = movementSpeed;
+=======
+        if (speed > movementSpeed)
+        {
+            speed = movementSpeed;
+>>>>>>> 2019WeRock
         }
         //moveHorizontally
         GetComponent<Rigidbody>().velocity = new Vector3(
