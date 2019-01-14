@@ -32,6 +32,9 @@ public class Player : MonoBehaviour
     //privates
     private bool dead = false;
     private float jumpingTimer = 0.0f;
+
+    public Action onCollectCoin;
+
     private float speed = 0.0f;
     private float jumpingSpeed = 0f;
     private bool canJump = false;
@@ -102,7 +105,7 @@ public class Player : MonoBehaviour
         {
             if (canJump)
             {
-                jumping = true;
+                Jump();
             }
         }
 
@@ -142,9 +145,7 @@ public class Player : MonoBehaviour
 
 
                 );
-
-        }
-
+          }
     
      }
 
@@ -178,18 +179,16 @@ public class Player : MonoBehaviour
 
         if (otherCollider.GetComponent<Enemy>() != null)
         {
-            Kill();
+            Enemy enemy = otherCollider.GetComponent<Enemy>();
+            if (enemy.Dead == false)
+            {
+                Kill();
+            }
+           
 
         }
-
-
-
-
+        
     }
-
-
-
-
 
 
     void OnTriggerStay(Collider otherCollider)
@@ -249,12 +248,45 @@ public class Player : MonoBehaviour
     void Kill ()
     {
         dead = true;
-        GetComponent<Collider>().enabled = false;
+       // GetComponent<Collider>().enabled = false;
         GetComponent<Rigidbody>().velocity = Vector3.zero;
         GetComponent<Rigidbody>().AddForce(new Vector3(0f, 500f, -50f));
 
 
     }
+
+    public void Jump(bool forced = false )
+    {
+
+        jumping = true;
+
+        if (forced )
+        {
+            GetComponent<Rigidbody>().velocity = new Vector3(
+              GetComponent<Rigidbody>().velocity.x,
+              jumpingSpeed,
+              GetComponent<Rigidbody>().velocity.z
+              );
+        }
+        
+
+
+    }
+
+    public void OnDestroyBrick()
+    {
+        GetComponent<Rigidbody>().velocity = new Vector3(
+            GetComponent<Rigidbody>().velocity.x,
+            0,
+            GetComponent<Rigidbody>().velocity.z
+        );
+        canJump = false;
+        jumping = false;
+    }
+
+
+
+
 }
 
 
