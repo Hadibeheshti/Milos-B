@@ -2,17 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SimpleEnemy : Enemy
+public class SimpleEnemy : PatrollingEnemy
 {
-    // Start is called before the first frame update
-    void Start()
+
+    // Use this for initialization
+    override protected void Start()
     {
-        
+        base.Start();
     }
 
     // Update is called once per frame
-    void Update()
+    override protected void Update()
     {
-        
+        base.Update();
     }
 }

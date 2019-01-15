@@ -23,7 +23,7 @@ public class EndGame : MonoBehaviour
 
     void Reset()
     {
-        SceneManager.LoadScene("Gate_1");
+        SceneManager.LoadScene("Gate_2");
     }
     
 }
