@@ -18126,12 +18126,12 @@ PrefabInstance:
     - target: {fileID: 5997040974959740944, guid: 197a8f6f1a616be4099423f8fe2958ca,
         type: 3}
       propertyPath: InitialModule.rotation3D
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5997040974959740944, guid: 197a8f6f1a616be4099423f8fe2958ca,
         type: 3}
       propertyPath: InitialModule.startRotationY.scalar
-      value: 0.87266463
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5997040974959740944, guid: 197a8f6f1a616be4099423f8fe2958ca,
         type: 3}
@@ -18141,6 +18141,11 @@ PrefabInstance:
     - target: {fileID: 5997040974959740944, guid: 197a8f6f1a616be4099423f8fe2958ca,
         type: 3}
       propertyPath: InitialModule.startRotationX.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5997040974959740944, guid: 197a8f6f1a616be4099423f8fe2958ca,
+        type: 3}
+      propertyPath: moveWithTransform
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5997040974959740945, guid: 197a8f6f1a616be4099423f8fe2958ca,
