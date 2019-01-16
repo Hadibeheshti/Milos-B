@@ -4,26 +4,39 @@ using UnityEngine;
 using System;
 
 public class Player : MonoBehaviour
-{
+{   
+
+    [Header("Milo Model")]
+    //The model to rotate.
+    public GameObject model;
+
+    [Header("Animator")]
+    public Animator anim;
+
     [Header("Accerelation")]
-    [Range (0.0f,8.0f)]
-    public float acceleration = 5.0f;
+    [Range(0.0f, 8.0f)]
+    public float acceleration = 4.0f;
     [Range(0.0f, 8.0f)]
     public float deaceleration = 5.0f;
 
-    [Header ("Movement Fields")]
+    [Header("Movement Fields")]
     [Range(0.0f, 8.0f)]
-    public float movementSpeed = 5f;
+    public float movementSpeed = 4f;
     [Range(0.0f, 10.0f)]
     public float movementSpeedRight = 8.0f;
     [Range(0.0f, 8.0f)]
     public float movementSpeedLeft = 2.0f;
 
-    [Header ("Jumping Fields")]
+    //Model Roation Speed
+    [Header("Rotation Speed")]
+
+    public float rotationSpeed = 10f;
+
+    [Header("Jumping Fields")]
     [Range(0.0f, 8.0f)]
     public float normalJumpingSpeed = 6.0f;
     [Range(8.0f, 20.0f)]
-    public float longJumpingSpeed = 10.0f;
+    public float longJumpingSpeed = 20.0f;
     [Range(0.0f, 2.0f)]
     public float jumpDuration = 0.75f;
     public float verticalWallJumpingSpeed = 5.0f;
@@ -37,9 +50,6 @@ public class Player : MonoBehaviour
     private float jumpingSpeed = 0f;
     private float jumpingTimer = 0f;
 
-   
-
-    
 
     private bool paused = false;
     private bool canJump = false;
@@ -51,35 +61,107 @@ public class Player : MonoBehaviour
     private bool onSpeedAreaRight = false;
     private bool onJumpLongBlock = false;
     private bool dead = false;
+    private bool facingRight = true;
+    // for model Rotation.  
+    private float towardsY = 0f;
+    
+
 
     public bool Dead
-      {
+    {
         get
         {
             return dead;
-         }
+        }
 
-       }
+    }
 
     private void Start()
     {
         jumpingSpeed = normalJumpingSpeed;
+        anim = GetComponentInChildren<Animator>();
+
 
     }
-
-
 
     private void FixedUpdate()
     {
-        
+        //Set Player's Direction
+
+       
+       
+       
+
     }
-    void Update ()
+
+
+    void Update()
     {
         if (dead)
         {
             return;
         }
-        
+
+        //Horizontal Variable for Motions (Rotation)
+
+        float h = Input.GetAxis("Horizontal");
+        float v = Input.GetAxis("Vertical");
+
+        //Der Winkel zu dem sich die Figure um die eigene Achse  (=Y) drehen soll.
+       
+
+
+        if (h > 0f)
+            
+        {
+            towardsY = 180f;
+        }
+        else if (h < 0f) {
+
+
+            towardsY = 0f;
+
+        }
+
+        model.transform.rotation = Quaternion.Lerp(model.transform.rotation, Quaternion.Euler(0f, towardsY, 0f), Time.deltaTime * rotationSpeed);
+
+
+        //Run Animation
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        {
+            MoveHorizontallyForward();
+
+        }
+
+
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        {
+            MoveHorizontallyBackWard();
+
+        }
+
+
+        //Stop Running Animation
+
+        if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.LeftArrow))
+        {
+            StopHorizontally();
+
+        }
+
+        //Jumping Animation.
+        if (Input.GetMouseButton(0) || Input.GetKey("space"))
+        {
+            anim.SetBool("onAir", true);
+
+        }
+
+        if (Input.GetMouseButtonUp(0) || Input.GetKeyUp("space"))
+        {
+            anim.SetBool("onAir", false);
+
+        }
+
         //Accelerate the Player.
         speed += acceleration * Time.deltaTime;
         float targetMovementSpeed = movementSpeed;
@@ -98,43 +180,23 @@ public class Player : MonoBehaviour
         if (speed > targetMovementSpeed)
         {
             speed -= deaceleration * Time.deltaTime;
-            
+
         }
-
-        //Hier alte Running
-
-        //Move Horizontally Positive.
-        if (Input.GetKey(KeyCode.D))
-        {
-            GetComponent<Rigidbody>().velocity = new Vector3(
-
-           paused ? 0 : speed,
-           GetComponent<Rigidbody>().velocity.y,
-           GetComponent<Rigidbody>().velocity.z);
-        }
-
-        //Move Horizontally Negative.
-        if (Input.GetKey(KeyCode.A))
-        {
-            GetComponent<Rigidbody>().velocity = new Vector3(
-
-            paused ? 0 : -speed,
-            GetComponent<Rigidbody>().velocity.y,
-            GetComponent<Rigidbody>().velocity.z);
-        }
-
 
         //Check for Input.
         bool pressingJumpButton = Input.GetMouseButton(0) || Input.GetKey("space");
+
         if (pressingJumpButton)
         {
 
             if (canJump)
             {
                 Jump();
-
-
+                
             }
+           
+
+
             //Check for Unpause.
 
             if (paused && pressingJumpButton)
@@ -147,53 +209,117 @@ public class Player : MonoBehaviour
             {
                 jumpingTimer += Time.deltaTime;
 
-                if (pressingJumpButton && jumpingTimer < jumpDuration )
-            {
+                if (pressingJumpButton && jumpingTimer < jumpDuration)
+                {
                     if (onJumpLongBlock == true)
                     {
                         jumpingSpeed = longJumpingSpeed;
                     }
-                 GetComponent<Rigidbody>().velocity = new Vector3(
+                    GetComponent<Rigidbody>().velocity = new Vector3(
 
-                            GetComponent<Rigidbody>().velocity.x,
-                            jumpingSpeed,
-                            GetComponent<Rigidbody>().velocity.z);
+                               GetComponent<Rigidbody>().velocity.x,
+                               jumpingSpeed,
+                               GetComponent<Rigidbody>().velocity.z);
+                }
+
             }
 
-          }
-            
         }
 
         //Make the Player Wall Jump.
-        if ( canWallJump)
-         {
+        if (canWallJump)
+        {
             speed = 0;
-            
+
             if (pressingJumpButton)
             {
-            canWallJump = false;
+                canWallJump = false;
 
-            speed = wallJumpLeft ? -horizontalJumpingSpeed : horizontalJumpingSpeed;
-            GetComponent<Rigidbody>().velocity = new Vector3(
+                speed = wallJumpLeft ? -horizontalJumpingSpeed : horizontalJumpingSpeed;
+                GetComponent<Rigidbody>().velocity = new Vector3(
 
-                           GetComponent<Rigidbody>().velocity.x,
-                            verticalWallJumpingSpeed,
-                            GetComponent<Rigidbody>().velocity.z);
+                               GetComponent<Rigidbody>().velocity.x,
+                                verticalWallJumpingSpeed,
+                                GetComponent<Rigidbody>().velocity.z);
+            }
+
         }
 
-        }
+        
+
+
+    }
+    //Move Horizontally.
+    private void MoveHorizontallyForward()
+    {
+
+        
+        GetComponent<Rigidbody>().velocity = new Vector3(
+
+            paused ? 0 : speed,
+            GetComponent<Rigidbody>().velocity.y,
+            GetComponent<Rigidbody>().velocity.z);
+            anim.SetBool("run", true);
+           
+    
+
+
     }
 
-    public void Pause  ()
+
+
+    //Move Horizontally.
+    private void MoveHorizontallyBackWard()
+    {
+
+      
+        GetComponent<Rigidbody>().velocity = new Vector3(
+
+            paused ? 0 : -speed,
+            GetComponent<Rigidbody>().velocity.y,
+            GetComponent<Rigidbody>().velocity.z);
+            anim.SetBool("run", true);
+       
+
+
+
+
+
+    }
+
+    public void StopHorizontally()
+    {
+        anim.SetBool("run", false);
+
+    }
+
+    public void OnAir()
+    {
+
+        anim.SetBool("onAir", true);
+    }
+
+    public void StopOnAir()
+    {
+        anim.SetBool("onAir", false);
+
+    }
+
+
+
+    public void Pause()
     {
         paused = true;
-        
+
     }
 
 
 
     private void OnTriggerEnter(Collider otherCollider)
-    {   // Collect coins.
+    {
+        
+
+        // Collect coins.
         if (otherCollider.transform.GetComponent<Coin>() != null)
         {
             Destroy(otherCollider.gameObject);
@@ -208,11 +334,12 @@ public class Player : MonoBehaviour
             if (speedArea.direction == Direction.Left)
             {
                 onSpeedAreaLeft = true;
-            }  else if (speedArea.direction == Direction.Right)
-                {
-                    onSpeedAreaRight = true;
             }
-         }
+            else if (speedArea.direction == Direction.Right)
+            {
+                onSpeedAreaRight = true;
+            }
+        }
         //Perform Longjump.
         if (otherCollider.GetComponent<LongJumpBlocks>() != null)
         {
@@ -223,27 +350,22 @@ public class Player : MonoBehaviour
 
         if (otherCollider.GetComponent<Enemy>() != null)
         {
-           
+
             Enemy enemy = otherCollider.GetComponent<Enemy>();
             if (enemy.Dead == false)
             {
                 Kill();
             }
-          
+
 
 
         }
 
 
     }
-        
-    
 
-
-
-
-    private void OnTriggerStay (Collider otherCollider)
-    {   
+    private void OnTriggerStay(Collider otherCollider)
+    {
 
         if (otherCollider.tag == "JumpingArea")
         {
@@ -252,9 +374,10 @@ public class Player : MonoBehaviour
             jumpingSpeed = normalJumpingSpeed;
             jumpingTimer = 0f;
             
+
         }
 
-            else if (otherCollider.tag == "WallJumpingArea")
+        else if (otherCollider.tag == "WallJumpingArea")
         {
             canWallJump = true;
             wallJumpLeft = transform.position.x < otherCollider.transform.position.x;
@@ -266,10 +389,12 @@ public class Player : MonoBehaviour
     private void OnTriggerExit(Collider otherCollider)
     {
         if (otherCollider.tag == "WallJumpingArea")
-        {   
+        {
 
-          
+
             canWallJump = false;
+           
+
         }
 
         if (otherCollider.GetComponent<SpeedArea>() != null)
@@ -301,40 +426,31 @@ public class Player : MonoBehaviour
         GetComponent<Collider>().enabled = false;
         GetComponent<Rigidbody>().velocity = Vector3.zero;
         GetComponent<Rigidbody>().AddForce(new Vector3(0, 500, -2));
+        anim.SetBool("die", true);
+
 
 
     }
 
-    public void Jump (bool forced = false)
+    public void Jump(bool forced = false)
     {
         jumping = true;
         if (forced)
         {
             GetComponent<Rigidbody>().velocity = new Vector3(
 
-                         GetComponent<Rigidbody>().velocity.x,
-                         jumpingSpeed,
-                         GetComponent<Rigidbody>().velocity.z); 
+            GetComponent<Rigidbody>().velocity.x,
+            jumpingSpeed,
+            GetComponent<Rigidbody>().velocity.z);
+           
+
+
+
 
         }
-       
+
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
