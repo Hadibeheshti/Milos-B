@@ -4,26 +4,25 @@ using UnityEngine;
 
 public class Destroyer : MonoBehaviour
 {
-
     public GameObject target;
 
-    // Use this for initialization
+    // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     void OnTriggerEnter(Collider otherCollider)
     {
         if (otherCollider.transform.GetComponent<Player>() != null)
         {
-          //  target.SendMessage("OnKill");
+            target.SendMessage("OnKill");
             Destroy(target.gameObject);
         }
     }

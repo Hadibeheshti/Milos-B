@@ -25,6 +25,7 @@ TagManager:
   - MoveMechanics
   - JumpingArea
   - WallJumpingArea
+  - Destuctable
   layers:
   - Default
   - TransparentFX

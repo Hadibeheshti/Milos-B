@@ -4,77 +4,86 @@ using UnityEngine;
 using System;
 
 public class Player : MonoBehaviour
-{   
-    //Publics
-    [Header("Accelerations")]
-    public float acceleration = 2.5f;
-    public float deacceleration = 5.0f;
+{
+    [Header("Accerelation")]
+    [Range (0.0f,8.0f)]
+    public float acceleration = 5.0f;
+    [Range(0.0f, 8.0f)]
+    public float deaceleration = 5.0f;
 
-    [Header("Movement Fields")]
-    [Range (4f, 6f)]
-    public float movementSpeed = 4.0f;
-    [Range(0f, 12f)]
+    [Header ("Movement Fields")]
+    [Range(0.0f, 8.0f)]
+    public float movementSpeed = 5f;
+    [Range(0.0f, 10.0f)]
     public float movementSpeedRight = 8.0f;
-    [Range(0f, 12f)]
+    [Range(0.0f, 8.0f)]
     public float movementSpeedLeft = 2.0f;
 
-    [Header("Jumping Fields")]
-    [Range(0f, 12f)]
+    [Header ("Jumping Fields")]
+    [Range(0.0f, 8.0f)]
     public float normalJumpingSpeed = 6.0f;
-    [Range(0f, 12f)]
+    [Range(8.0f, 20.0f)]
     public float longJumpingSpeed = 10.0f;
-    [Range(0f, 12f)]
-    public float jumpDuraition = 0.75f;
-    [Range(0f, 12f)]
+    [Range(0.0f, 2.0f)]
+    public float jumpDuration = 0.75f;
     public float verticalWallJumpingSpeed = 5.0f;
-    [Range(0f, 12f)] 
-    public float horizontalWallJumpingSpeed = 3.5f;
-    //privates
-    private bool dead = false;
-    private float jumpingTimer = 0.0f;
+    [Range(0.0f, 8.0f)]
+    public float horizontalJumpingSpeed = 3.5f;
 
     public Action onCollectCoin;
 
-    private float speed = 0.0f;
+
+    private float speed = 0f;
     private float jumpingSpeed = 0f;
+    private float jumpingTimer = 0f;
+
+   
+
+    
+
+    private bool paused = false;
     private bool canJump = false;
     private bool jumping = false;
+
     private bool canWallJump = false;
     private bool wallJumpLeft = false;
     private bool onSpeedAreaLeft = false;
     private bool onSpeedAreaRight = false;
-    private bool onLongJumpBlock = false;
+    private bool onJumpLongBlock = false;
+    private bool dead = false;
+
     public bool Dead
-    {
+      {
         get
         {
             return dead;
+         }
 
-        }
-
-    }
-   
-
-
-
-
+       }
 
     private void Start()
     {
         jumpingSpeed = normalJumpingSpeed;
-        
+
     }
 
-    void Update()
+
+
+    private void FixedUpdate()
+    {
+        
+    }
+    void Update ()
     {
         if (dead)
         {
             return;
         }
+        
         //Accelerate the Player.
         speed += acceleration * Time.deltaTime;
-
         float targetMovementSpeed = movementSpeed;
+
         if (onSpeedAreaLeft)
         {
             targetMovementSpeed = movementSpeedLeft;
@@ -86,208 +95,232 @@ public class Player : MonoBehaviour
         }
 
 
-
-
         if (speed > targetMovementSpeed)
         {
-            speed -= deacceleration * Time.deltaTime;
-           
+            speed -= deaceleration * Time.deltaTime;
+            
         }
-        //Move horizontally.
-            GetComponent<Rigidbody>().velocity = new Vector3(
-            GetComponent<Rigidbody>().velocity.x,
-            GetComponent<Rigidbody>().velocity.y, 
-            speed);
-        //Check for Inputs.
 
+        //Hier alte Running
+
+        //Move Horizontally Positive.
+        if (Input.GetKey(KeyCode.D))
+        {
+            GetComponent<Rigidbody>().velocity = new Vector3(
+
+           paused ? 0 : speed,
+           GetComponent<Rigidbody>().velocity.y,
+           GetComponent<Rigidbody>().velocity.z);
+        }
+
+        //Move Horizontally Negative.
+        if (Input.GetKey(KeyCode.A))
+        {
+            GetComponent<Rigidbody>().velocity = new Vector3(
+
+            paused ? 0 : -speed,
+            GetComponent<Rigidbody>().velocity.y,
+            GetComponent<Rigidbody>().velocity.z);
+        }
+
+
+        //Check for Input.
         bool pressingJumpButton = Input.GetMouseButton(0) || Input.GetKey("space");
         if (pressingJumpButton)
         {
+
             if (canJump)
             {
                 Jump();
+
+
             }
-        }
+            //Check for Unpause.
 
-        //Make the Player Jump.
-        if (jumping) { 
-        {
-            jumpingTimer += Time.deltaTime;
-
-            if (pressingJumpButton && jumpingTimer < jumpDuraition)
+            if (paused && pressingJumpButton)
             {
-                    if (onLongJumpBlock == true)
+                paused = false;
+            }
+
+            //Make the Player jump.
+            if (jumping)
+            {
+                jumpingTimer += Time.deltaTime;
+
+                if (pressingJumpButton && jumpingTimer < jumpDuration )
+            {
+                    if (onJumpLongBlock == true)
                     {
                         jumpingSpeed = longJumpingSpeed;
                     }
-                GetComponent<Rigidbody>().velocity = new Vector3(
-                GetComponent<Rigidbody>().velocity.x,
-                jumpingSpeed,
-                GetComponent<Rigidbody>().velocity.z
-                );
+                 GetComponent<Rigidbody>().velocity = new Vector3(
+
+                            GetComponent<Rigidbody>().velocity.x,
+                            jumpingSpeed,
+                            GetComponent<Rigidbody>().velocity.z);
             }
+
+          }
+            
         }
-    }
+
         //Make the Player Wall Jump.
-        if (canWallJump)
-        {
+        if ( canWallJump)
+         {
             speed = 0;
+            
             if (pressingJumpButton)
             {
-                canWallJump = false;
-            
-            speed = wallJumpLeft ? -horizontalWallJumpingSpeed : horizontalWallJumpingSpeed;
+            canWallJump = false;
 
+            speed = wallJumpLeft ? -horizontalJumpingSpeed : horizontalJumpingSpeed;
             GetComponent<Rigidbody>().velocity = new Vector3(
-                GetComponent<Rigidbody>().velocity.x,
-                verticalWallJumpingSpeed,
-                GetComponent<Rigidbody>().velocity.z
 
+                           GetComponent<Rigidbody>().velocity.x,
+                            verticalWallJumpingSpeed,
+                            GetComponent<Rigidbody>().velocity.z);
+        }
 
-                );
-          }
-    
-     }
-
+        }
     }
 
-    private void OnTriggerEnter(Collider otherCollider)
+    public void Pause  ()
     {
-        // Speed up or down.
+        paused = true;
+        
+    }
+
+
+
+    private void OnTriggerEnter(Collider otherCollider)
+    {   // Collect coins.
+        if (otherCollider.transform.GetComponent<Coin>() != null)
+        {
+            Destroy(otherCollider.gameObject);
+            onCollectCoin();
+        }
+
+        //Speed Up or Down.
         if (otherCollider.GetComponent<SpeedArea>() != null)
         {
             SpeedArea speedArea = otherCollider.GetComponent<SpeedArea>();
+
             if (speedArea.direction == Direction.Left)
             {
                 onSpeedAreaLeft = true;
+            }  else if (speedArea.direction == Direction.Right)
+                {
+                    onSpeedAreaRight = true;
             }
-            else if (speedArea.direction == Direction.Right)
-            {
-                onSpeedAreaRight = true;
-            }
-
-        }
-        // Perform long jump.
+         }
+        //Perform Longjump.
         if (otherCollider.GetComponent<LongJumpBlocks>() != null)
-
         {
-            onLongJumpBlock = true;
-
+            onJumpLongBlock = true;
         }
 
-        //kill the player when they the Enemy.
+        //Kill the Player when they touch the Enemy.
 
         if (otherCollider.GetComponent<Enemy>() != null)
         {
+           
             Enemy enemy = otherCollider.GetComponent<Enemy>();
             if (enemy.Dead == false)
             {
                 Kill();
             }
-           
+          
+
 
         }
-        
+
+
     }
+        
+    
 
 
-    void OnTriggerStay(Collider otherCollider)
 
-    {
+
+    private void OnTriggerStay (Collider otherCollider)
+    {   
+
         if (otherCollider.tag == "JumpingArea")
         {
             canJump = true;
             jumping = false;
             jumpingSpeed = normalJumpingSpeed;
             jumpingTimer = 0f;
-
-
+            
         }
-        else if (otherCollider.tag == "WallJumpingArea")
+
+            else if (otherCollider.tag == "WallJumpingArea")
         {
             canWallJump = true;
-            wallJumpLeft = transform.position.z < otherCollider.transform.position.z;
+            wallJumpLeft = transform.position.x < otherCollider.transform.position.x;
         }
 
-       
+
     }
 
     private void OnTriggerExit(Collider otherCollider)
     {
         if (otherCollider.tag == "WallJumpingArea")
-        {
+        {   
+
+          
             canWallJump = false;
         }
-        if (otherCollider.GetComponent<SpeedArea> () !=null)
-        {
-                    
-        SpeedArea speedArea = otherCollider.GetComponent<SpeedArea>();
 
-        if (speedArea.direction == Direction.Left)
+        if (otherCollider.GetComponent<SpeedArea>() != null)
         {
-            onSpeedAreaLeft = false;
+            SpeedArea speedArea = otherCollider.GetComponent<SpeedArea>();
+
+            if (speedArea.direction == Direction.Left)
+            {
+                onSpeedAreaLeft = false;
+            }
+            else if (speedArea.direction == Direction.Right)
+            {
+                onSpeedAreaRight = false;
+            }
+
+
         }
-        else if (speedArea.direction == Direction.Right)
-        {
-            onSpeedAreaRight = false;
-        }
-
-
-    }
 
         if (otherCollider.GetComponent<LongJumpBlocks>() != null)
-
         {
-            onLongJumpBlock = false;
-
+            onJumpLongBlock = false;
         }
-
     }
 
-
-    void Kill ()
+    void Kill()
     {
+
         dead = true;
-       // GetComponent<Collider>().enabled = false;
+        GetComponent<Collider>().enabled = false;
         GetComponent<Rigidbody>().velocity = Vector3.zero;
-        GetComponent<Rigidbody>().AddForce(new Vector3(0f, 500f, -50f));
+        GetComponent<Rigidbody>().AddForce(new Vector3(0, 500, -2));
 
 
     }
 
-    public void Jump(bool forced = false )
+    public void Jump (bool forced = false)
     {
-
         jumping = true;
-
-        if (forced )
+        if (forced)
         {
             GetComponent<Rigidbody>().velocity = new Vector3(
-              GetComponent<Rigidbody>().velocity.x,
-              jumpingSpeed,
-              GetComponent<Rigidbody>().velocity.z
-              );
+
+                         GetComponent<Rigidbody>().velocity.x,
+                         jumpingSpeed,
+                         GetComponent<Rigidbody>().velocity.z); 
+
         }
-        
-
-
+       
     }
-
-    public void OnDestroyBrick()
-    {
-        GetComponent<Rigidbody>().velocity = new Vector3(
-            GetComponent<Rigidbody>().velocity.x,
-            0,
-            GetComponent<Rigidbody>().velocity.z
-        );
-        canJump = false;
-        jumping = false;
-    }
-
-
-
-
 }
+
 
 
 
