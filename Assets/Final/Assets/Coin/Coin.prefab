@@ -162,17 +162,17 @@ PrefabInstance:
     - target: {fileID: 7034370326086124402, guid: d772479fec85b794585f58c424b667c9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.44
+      value: 0.11
       objectReference: {fileID: 0}
     - target: {fileID: 7034370326086124402, guid: d772479fec85b794585f58c424b667c9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.67
+      value: -0.02
       objectReference: {fileID: 0}
     - target: {fileID: 7034370326086124402, guid: d772479fec85b794585f58c424b667c9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.01
+      value: 0.09
       objectReference: {fileID: 0}
     - target: {fileID: 1757625338248419870, guid: d772479fec85b794585f58c424b667c9,
         type: 3}
@@ -188,6 +188,31 @@ PrefabInstance:
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
       value: 0.10902455
+      objectReference: {fileID: 0}
+    - target: {fileID: 1757625338248419870, guid: d772479fec85b794585f58c424b667c9,
+        type: 3}
+      propertyPath: prewarm
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1757625338248419870, guid: d772479fec85b794585f58c424b667c9,
+        type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1757625338248419870, guid: d772479fec85b794585f58c424b667c9,
+        type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1757625338248419870, guid: d772479fec85b794585f58c424b667c9,
+        type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1757625338248419870, guid: d772479fec85b794585f58c424b667c9,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d772479fec85b794585f58c424b667c9, type: 3}
