@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+
 public class Player : MonoBehaviour
-{   
+{
+    public float distanceGround;
+    public bool isGrounded = false;
 
     [Header("Milo Model")]
     //The model to rotate.
@@ -64,7 +67,12 @@ public class Player : MonoBehaviour
     private bool facingRight = true;
     // for model Rotation.  
     private float towardsY = 0f;
+
+    private bool onGround = false;
+
+    private Rigidbody rigid;
     
+
 
 
     public bool Dead
@@ -78,20 +86,34 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
+        rigid = GetComponent<Rigidbody>();
         jumpingSpeed = normalJumpingSpeed;
         anim = GetComponentInChildren<Animator>();
 
+        distanceGround = GetComponent<Collider>().bounds.extents.y;
 
     }
 
     private void FixedUpdate()
     {
-        //Set Player's Direction
+        if (!Physics.Raycast(transform.position, -Vector3.up, distanceGround + 0.1f))
+        {
+            isGrounded = false;
+            print("We are in the Air");
+            anim.SetBool("grounded", false);
 
-       
-       
-       
+        } else  {
 
+                isGrounded = true;
+
+            anim.SetBool("grounded", true);
+            print("We are on the Ground");
+
+
+            }
+            
+        
+       
     }
 
 
@@ -106,6 +128,9 @@ public class Player : MonoBehaviour
 
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
+
+        anim.SetFloat("forward", Mathf.Abs(h));
+         
 
         //Der Winkel zu dem sich die Figure um die eigene Achse  (=Y) drehen soll.
        
@@ -161,6 +186,9 @@ public class Player : MonoBehaviour
             anim.SetBool("onAir", false);
 
         }
+
+       
+
 
         //Accelerate the Player.
         speed += acceleration * Time.deltaTime;
@@ -244,10 +272,6 @@ public class Player : MonoBehaviour
             }
 
         }
-
-        
-
-
     }
     //Move Horizontally.
     private void MoveHorizontallyForward()
@@ -260,14 +284,9 @@ public class Player : MonoBehaviour
             GetComponent<Rigidbody>().velocity.y,
             GetComponent<Rigidbody>().velocity.z);
             anim.SetBool("run", true);
-           
-    
-
-
+       
     }
-
-
-
+    
     //Move Horizontally.
     private void MoveHorizontallyBackWard()
     {
@@ -279,12 +298,6 @@ public class Player : MonoBehaviour
             GetComponent<Rigidbody>().velocity.y,
             GetComponent<Rigidbody>().velocity.z);
             anim.SetBool("run", true);
-       
-
-
-
-
-
     }
 
     public void StopHorizontally()
@@ -304,21 +317,16 @@ public class Player : MonoBehaviour
         anim.SetBool("onAir", false);
 
     }
-
-
-
+    
     public void Pause()
     {
         paused = true;
 
     }
-
-
-
+    
     private void OnTriggerEnter(Collider otherCollider)
     {
         
-
         // Collect coins.
         if (otherCollider.transform.GetComponent<Coin>() != null)
         {
@@ -357,9 +365,7 @@ public class Player : MonoBehaviour
                 Kill();
             }
 
-
-
-        }
+         }
 
 
     }
@@ -367,12 +373,15 @@ public class Player : MonoBehaviour
     private void OnTriggerStay(Collider otherCollider)
     {
 
+
         if (otherCollider.tag == "JumpingArea")
         {
             canJump = true;
             jumping = false;
             jumpingSpeed = normalJumpingSpeed;
             jumpingTimer = 0f;
+           
+
             
 
         }
@@ -393,8 +402,9 @@ public class Player : MonoBehaviour
 
 
             canWallJump = false;
-           
 
+           
+            
         }
 
         if (otherCollider.GetComponent<SpeedArea>() != null)
@@ -434,15 +444,29 @@ public class Player : MonoBehaviour
 
     public void Jump(bool forced = false)
     {
+
+
+
         jumping = true;
         if (forced)
         {
-            GetComponent<Rigidbody>().velocity = new Vector3(
+           /* RaycastHit hitInfo;
+            Debug.DrawRay(transform.position + (Vector3.up * 0.1f), Vector3.down, Color.cyan, myRaycastLength);
+            onGround = Physics.Raycast(transform.position + (Vector3.up * 0.05f), Vector3.down, out hitInfo, myRaycastLength);
+            anim.SetBool("grounded", onGround);
 
-            GetComponent<Rigidbody>().velocity.x,
-            jumpingSpeed,
-            GetComponent<Rigidbody>().velocity.z);
-           
+
+            if (Input.GetAxis("Jump") > 0f && onGround) */
+
+                GetComponent<Rigidbody>().velocity = new Vector3(
+
+                 GetComponent<Rigidbody>().velocity.x,
+                 jumpingSpeed,
+                 GetComponent<Rigidbody>().velocity.z);
+
+
+
+
 
 
 
@@ -485,7 +509,7 @@ public class Player : MonoBehaviour
    /// Lauf Geschwindigkeigt der Figur
    /// </summary>
    public float speed = 0.1f;
-   [SerializeField] float myRaycastLength = 1;
+  
    /// <summary>
    /// Das grafische Model, u.a. für die Drehung in Laufrichtung.
    /// </summary>
