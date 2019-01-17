@@ -100,7 +100,7 @@ public class Player : MonoBehaviour
         if (!Physics.Raycast(transform.position, -Vector3.up, distanceGround + 0.1f))
         {
             isGrounded = false;
-            print("We are in the Air");
+          
             anim.SetBool("grounded", false);
 
         } else  {
@@ -108,7 +108,7 @@ public class Player : MonoBehaviour
                 isGrounded = true;
 
             anim.SetBool("grounded", true);
-            print("We are on the Ground");
+          
 
 
             }
@@ -327,9 +327,24 @@ public class Player : MonoBehaviour
     
     private void OnTriggerEnter(Collider otherCollider)
     {
-        
-        // Collect coins.
-        if (otherCollider.transform.GetComponent<Coin>() != null)
+     
+            if (otherCollider.gameObject.tag == "Monster")
+            {
+
+            Kill();
+
+
+
+
+              //  Coin.instance.GameOver();
+
+
+
+
+        }
+
+            // Collect coins.
+            if (otherCollider.transform.GetComponent<Coin>() != null)
         {
             Destroy(otherCollider.gameObject);
             onCollectCoin();
@@ -443,7 +458,9 @@ public class Player : MonoBehaviour
 
     }
 
-    public void Jump(bool forced = false)
+   
+
+        public void Jump(bool forced = false)
     {
 
 
