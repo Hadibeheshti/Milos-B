@@ -36,14 +36,15 @@ public class Player : MonoBehaviour
     public float rotationSpeed = 10f;
 
     [Header("Jumping Fields")]
-    [Range(0.0f, 8.0f)]
+    [Range(0.0f, 10.0f)]
     public float normalJumpingSpeed = 6.0f;
     [Range(8.0f, 20.0f)]
     public float longJumpingSpeed = 20.0f;
     [Range(0.0f, 2.0f)]
     public float jumpDuration = 0.75f;
+    [Range(0.0f, 10.0f)]
     public float verticalWallJumpingSpeed = 5.0f;
-    [Range(0.0f, 8.0f)]
+    [Range(0.0f, 12.0f)]
     public float horizontalJumpingSpeed = 3.5f;
 
     public Action onCollectCoin;
@@ -474,6 +475,21 @@ public class Player : MonoBehaviour
         }
 
     }
+
+
+
+    public void OnDestroyBrick()
+    {
+        GetComponent<Rigidbody>().velocity = new Vector3(
+            GetComponent<Rigidbody>().velocity.x,
+            0,
+            GetComponent<Rigidbody>().velocity.z);
+        canJump = false;
+        jumping = false;
+
+
+    }
+
 }
 
 

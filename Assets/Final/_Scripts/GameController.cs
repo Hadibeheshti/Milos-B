@@ -9,7 +9,8 @@ public class GameController : MonoBehaviour
     public Player player;
     public Text scoreText;
     private int score;
-    private float restartTimer = 3f; 
+    private float restartTimer = 3f;
+    public float gravity = 9.81f;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +34,9 @@ public class GameController : MonoBehaviour
             }
 
         }
+
+        Physics.gravity = new Vector3(0, -gravity, 0);
+
         
     }
 

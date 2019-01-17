@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9d64dc0677f38a48b1e12a277e91736, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasCoin: 0
+  hasCoin: 1
   coinPrefab: {fileID: 1718236565994535241, guid: f7e3e4a0a7d557a48833183ca4bae0a0,
     type: 3}
   coinOffset: 0.7
