@@ -1,41 +1,20 @@
 fileFormatVersion: 2
-guid: 6faa4076a385e5e42a2cabd7f38a7b56
+guid: 04755dfe1ad8701438461b8db8e3ef92
 ModelImporter:
-  serializedVersion: 22
+  serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: RockChunk01_LOD0
-    100004: RockChunk01_LOD1
-    100006: RockChunk01_LOD2
     400000: //RootNode
-    400002: RockChunk01_LOD0
-    400004: RockChunk01_LOD1
-    400006: RockChunk01_LOD2
-    2100000: RockChunk01_mat
+    2100000: CliffEdge02_Mat
     2300000: //RootNode
-    2300002: RockChunk01_LOD0
-    2300004: RockChunk01_LOD1
-    2300006: RockChunk01_LOD2
     3300000: //RootNode
-    3300002: RockChunk01_LOD0
-    3300004: RockChunk01_LOD1
-    3300006: RockChunk01_LOD2
-    4300000: RockChunk01
-    4300002: RockChunk01_LOD0
-    4300004: RockChunk01_LOD1
-    4300006: RockChunk01_LOD2
-    20500000: //RootNode
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: RockChunk01_mat
-    second: {fileID: 2100000, guid: 18da08da9c279494e87f918ddfd4197b, type: 2}
+    4300000: CliffEdge02
+  externalObjects: {}
   materials:
     importMaterials: 1
-    materialName: 1
-    materialSearch: 2
-    materialLocation: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -60,19 +39,17 @@ ModelImporter:
     clipAnimations: []
     isReadable: 1
   meshes:
-    lODScreenPercentages:
-    - 0.25
-    - 0.125
-    - 0.01
+    lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
@@ -84,11 +61,16 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
@@ -103,7 +85,6 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1

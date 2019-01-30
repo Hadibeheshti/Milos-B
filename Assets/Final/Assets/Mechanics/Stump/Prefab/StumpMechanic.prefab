@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 6139328371289581494}
   m_Layer: 0
   m_Name: StumpMechanic
-  m_TagString: Untagged
+  m_TagString: JumpingArea
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
