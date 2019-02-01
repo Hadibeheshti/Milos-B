@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {    // Model für Drehung in Laufrichtung
      public GameObject model;
- 
+
     // LaufGeschwindigkeit
 
     public float movementSpeed = 5f;
@@ -37,10 +37,8 @@ public class PlayerMovement : MonoBehaviour
     public float extraGravity = 20f;
     // Ist die Figur gerade auf dem Boden ?Wenn false , fält oder sprint sie ?
     private bool onGround = false;
-  
 
-
-
+    
     private void Update()
     {   //Diese drei Methode können in FixedUpdate auch sein später testen !
        // PlayerMove();
@@ -48,8 +46,7 @@ public class PlayerMovement : MonoBehaviour
        // PlayerJump();
         PlayerRotation();
        Jumping();
-
-
+        
 
     }
 

@@ -1,67 +1,43 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class Coin : MonoBehaviour
-
-
 {
-    public int coin = 0;
-    public static Coin instance = null;
+    public GameObject model;
+    public float rotatingSpeed = 300.0f;
 
-    //[Header("UI")]
-    public Text coinText;
-    public GameObject gameOver;
-    //public GameObject youWon;
-
-
+    // Start is called before the first frame update
     void Start()
     {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        coinText.text = coin.ToString();
-        gameOver.SetActive(false);
-        //youWon.SetActive(false);
+        
     }
 
-
-    public void GameOver()
+    // Update is called once per frame
+    void Update()
     {
-        gameOver.SetActive(true);
-        print("Game Over");
+        model.transform.RotateAround(model.transform.position, Vector3.up, rotatingSpeed * Time.deltaTime);  
+
+
     }
-    //void CheckGameOver()
-    //{
-    //    if (coin > 3)
-    //    {
-    //        youWon.SetActive(true);
-    //        print("You Won!!!");
-    //        Invoke("Reset", resetDelay);  //"reset" in anführungszeichen weil invoke nach dem string im script sucht, dadurch auch recht langsam
-    //    }
-
-    //    if (lives < 1)
-    //    {
-    //        gameOver.SetActive(true);
-    //        print("Game Over");
-    //        Invoke("Reset", resetDelay); //führt Funktion Reset verzögert aus
-    //    }
-    //}
-    //void Reset()
-    //{
-    //    SceneManager.LoadScene("PaulTest");
-    //}
 
 
-    //void Start()
-    //{
-    //    coinText.text = coin.ToString();
-    //}
-
-
-    public void CoinDestroyed()
+    public void Vanish()
     {
-        coin += 1;
-        coinText.text = coin.ToString() ;
+
+        StartCoroutine (VanishRoutine());
+
+
     }
+
+    private IEnumerator VanishRoutine ()
+    {
+        yield return new WaitForSeconds (0.3f);
+
+        Destroy(this.gameObject);
+
+
+
+    }
+
 }
