@@ -449,9 +449,9 @@ public class Player : MonoBehaviour
     {
 
         dead = true;
-        GetComponent<Collider>().enabled = false;
+        //changed changed GetComponent<Collider>().enabled = false;
         GetComponent<Rigidbody>().velocity = Vector3.zero;
-        GetComponent<Rigidbody>().AddForce(new Vector3(0, 500, -2));
+        //GetComponent<Rigidbody>().AddForce(new Vector3(0, 500, -2));
         anim.SetBool("die", true);
 
 
