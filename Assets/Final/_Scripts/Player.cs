@@ -65,11 +65,11 @@ public class Player : MonoBehaviour
     private bool onSpeedAreaRight = false;
     private bool onJumpLongBlock = false;
     private bool dead = false;
-    private bool facingRight = true;
+   // private bool facingRight = true;
     // for model Rotation.  
     private float towardsY = 0f;
 
-    private bool onGround = false;
+    //private bool onGround = false;
 
     private Rigidbody rigid;
     
@@ -178,13 +178,13 @@ public class Player : MonoBehaviour
         //Jumping Animation.
         if (Input.GetMouseButton(0) || Input.GetKey("space"))
         {
-            anim.SetBool("onAir", true);
+          //  anim.SetBool("onAir", true);
 
         }
 
         if (Input.GetMouseButtonUp(0) || Input.GetKeyUp("space"))
         {
-            anim.SetBool("onAir", false);
+           // anim.SetBool("onAir", false);
 
         }
 
@@ -284,7 +284,7 @@ public class Player : MonoBehaviour
             paused ? 0 : speed,
             GetComponent<Rigidbody>().velocity.y,
             GetComponent<Rigidbody>().velocity.z);
-            anim.SetBool("run", true);
+          //  anim.SetBool("run", true);
        
     }
     
@@ -298,12 +298,12 @@ public class Player : MonoBehaviour
             paused ? 0 : -speed,
             GetComponent<Rigidbody>().velocity.y,
             GetComponent<Rigidbody>().velocity.z);
-            anim.SetBool("run", true);
+           // anim.SetBool("run", true);
     }
 
     public void StopHorizontally()
     {
-        anim.SetBool("run", false);
+       // anim.SetBool("run", false);
 
     }
 
