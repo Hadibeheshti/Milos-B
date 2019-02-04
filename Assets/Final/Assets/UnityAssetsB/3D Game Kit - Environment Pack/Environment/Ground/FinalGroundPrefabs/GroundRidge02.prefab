@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7062004600658299113}
   m_Layer: 0
   m_Name: GroundRidge02
-  m_TagString: JumpingArea
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123,6 +123,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 3aac757c9ab7c7c429df5ccd6604d68f, type: 3}
       propertyPath: m_Name
       value: Ridge02_collid
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3aac757c9ab7c7c429df5ccd6604d68f, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3aac757c9ab7c7c429df5ccd6604d68f, type: 3}
       propertyPath: m_LocalPosition.x

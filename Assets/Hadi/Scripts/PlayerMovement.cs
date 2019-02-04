@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
     // Ob es auf dem Boden ist oder nicht *1
     private bool isGrounded;
     //*1
-    private bool playerJumped = false;
+    //private bool playerJumped = false;
     //*1
     private bool canDoubleJump =false;
     //Der Winkel zu dem sich Figur um die eigene Achse (=Y) drehen soll.
@@ -93,7 +93,7 @@ public class PlayerMovement : MonoBehaviour
     if (Input.GetKeyDown (KeyCode.Space) && isGrounded)
         {
             myBody.AddForce (new Vector3(0,jumpPower,0));
-            playerJumped = true;
+           // playerJumped = true;
             canDoubleJump = true;
            
 

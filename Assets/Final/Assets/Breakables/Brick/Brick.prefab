@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasCoin: 1
-  coinPrefab: {fileID: 1718236565994535241, guid: f7e3e4a0a7d557a48833183ca4bae0a0,
+  coinPrefab: {fileID: 5656030714247418581, guid: 680658009f692fc45a57a505aad6326b,
     type: 3}
   coinOffset: 0.7
 --- !u!1 &1239348148971556414
