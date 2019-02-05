@@ -11975,7 +11975,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MainTheme: {fileID: 0}
-  HomeBG: {fileID: 8300000, guid: 0f18e80e4cfb10d44a319f0a6e138d85, type: 3}
+  HomeBG: {fileID: 8300000, guid: 05853dbbd26b4834eaf3fbff74347fac, type: 3}
   myAudiosrc: {fileID: 1015617737}
 --- !u!1 &1016173032
 GameObject:
@@ -22206,6 +22206,56 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 471361221594083590, guid: 5f494a3360b5a474db4092f325d329f6,
+        type: 3}
+      propertyPath: normalModel
+      value: 
+      objectReference: {fileID: 102772547}
+    - target: {fileID: 471361221594083590, guid: 5f494a3360b5a474db4092f325d329f6,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1027293938}
+    - target: {fileID: 471361221594083590, guid: 5f494a3360b5a474db4092f325d329f6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 471361221594083590, guid: 5f494a3360b5a474db4092f325d329f6,
+        type: 3}
+      propertyPath: model
+      value: 
+      objectReference: {fileID: 102772547}
+    - target: {fileID: 471361221594083590, guid: 5f494a3360b5a474db4092f325d329f6,
+        type: 3}
+      propertyPath: myRaycastLength
+      value: 0.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 471361221594083590, guid: 5f494a3360b5a474db4092f325d329f6,
+        type: 3}
+      propertyPath: jumpDuration
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 471361221594083590, guid: 5f494a3360b5a474db4092f325d329f6,
+        type: 3}
+      propertyPath: normalJumpingSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 471361221594083590, guid: 5f494a3360b5a474db4092f325d329f6,
+        type: 3}
+      propertyPath: acceleration
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 471361221594083590, guid: 5f494a3360b5a474db4092f325d329f6,
+        type: 3}
+      propertyPath: movementSpeed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2328374944240601034, guid: 5f494a3360b5a474db4092f325d329f6,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 939d9ca3b1ec430418ad03f077241ed3, type: 2}
     - target: {fileID: 471361221594083588, guid: 5f494a3360b5a474db4092f325d329f6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22261,56 +22311,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 471361221594083590, guid: 5f494a3360b5a474db4092f325d329f6,
-        type: 3}
-      propertyPath: normalModel
-      value: 
-      objectReference: {fileID: 102772547}
-    - target: {fileID: 471361221594083590, guid: 5f494a3360b5a474db4092f325d329f6,
-        type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 1027293938}
-    - target: {fileID: 471361221594083590, guid: 5f494a3360b5a474db4092f325d329f6,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 471361221594083590, guid: 5f494a3360b5a474db4092f325d329f6,
-        type: 3}
-      propertyPath: model
-      value: 
-      objectReference: {fileID: 102772547}
-    - target: {fileID: 471361221594083590, guid: 5f494a3360b5a474db4092f325d329f6,
-        type: 3}
-      propertyPath: myRaycastLength
-      value: 0.52
-      objectReference: {fileID: 0}
-    - target: {fileID: 471361221594083590, guid: 5f494a3360b5a474db4092f325d329f6,
-        type: 3}
-      propertyPath: jumpDuration
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 471361221594083590, guid: 5f494a3360b5a474db4092f325d329f6,
-        type: 3}
-      propertyPath: normalJumpingSpeed
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 471361221594083590, guid: 5f494a3360b5a474db4092f325d329f6,
-        type: 3}
-      propertyPath: acceleration
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 471361221594083590, guid: 5f494a3360b5a474db4092f325d329f6,
-        type: 3}
-      propertyPath: movementSpeed
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2328374944240601034, guid: 5f494a3360b5a474db4092f325d329f6,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 939d9ca3b1ec430418ad03f077241ed3, type: 2}
     - target: {fileID: 471361221594083586, guid: 5f494a3360b5a474db4092f325d329f6,
         type: 3}
       propertyPath: m_Enabled
