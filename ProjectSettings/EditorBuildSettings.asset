@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Final/Scenes/Menu.unity
     guid: 4b63de09f6a4052499596484993f6746
   - enabled: 1
-    path: Assets/Paul/PaulTest.unity
-    guid: 0ee54b8fede2f91448ff8b7038d435e3
+    path: Assets/Final/Scenes/Gate_1.unity
+    guid: 934fe5695a80eff418e6da703236d34c
   m_configObjects: {}

@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {    // Model für Drehung in Laufrichtung
      public GameObject model;
- 
+
     // LaufGeschwindigkeit
 
     public float movementSpeed = 5f;
@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
     // Ob es auf dem Boden ist oder nicht *1
     private bool isGrounded;
     //*1
-    private bool playerJumped = false;
+    //private bool playerJumped = false;
     //*1
     private bool canDoubleJump =false;
     //Der Winkel zu dem sich Figur um die eigene Achse (=Y) drehen soll.
@@ -37,10 +37,8 @@ public class PlayerMovement : MonoBehaviour
     public float extraGravity = 20f;
     // Ist die Figur gerade auf dem Boden ?Wenn false , fält oder sprint sie ?
     private bool onGround = false;
-  
 
-
-
+    
     private void Update()
     {   //Diese drei Methode können in FixedUpdate auch sein später testen !
        // PlayerMove();
@@ -48,8 +46,7 @@ public class PlayerMovement : MonoBehaviour
        // PlayerJump();
         PlayerRotation();
        Jumping();
-
-
+        
 
     }
 
@@ -96,7 +93,7 @@ public class PlayerMovement : MonoBehaviour
     if (Input.GetKeyDown (KeyCode.Space) && isGrounded)
         {
             myBody.AddForce (new Vector3(0,jumpPower,0));
-            playerJumped = true;
+           // playerJumped = true;
             canDoubleJump = true;
            
 

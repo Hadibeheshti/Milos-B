@@ -21,6 +21,11 @@ TagManager:
   - "Schl\xFCsselfragment4"
   - Score
   - Coin
+  - Water
+  - MoveMechanics
+  - JumpingArea
+  - WallJumpingArea
+  - Destuctable
   layers:
   - Default
   - TransparentFX
