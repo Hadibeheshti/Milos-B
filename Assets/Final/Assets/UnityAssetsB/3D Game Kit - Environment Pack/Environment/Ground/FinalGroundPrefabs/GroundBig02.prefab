@@ -67,14 +67,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 642006709048485805}
     m_Modifications:
-    - target: {fileID: 100000, guid: 609c1f7033ee9b143bd3d26e0f3d1440, type: 3}
-      propertyPath: m_Name
-      value: GroundBig02_Collid
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 609c1f7033ee9b143bd3d26e0f3d1440, type: 3}
-      propertyPath: m_TagString
-      value: JumpingArea
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 609c1f7033ee9b143bd3d26e0f3d1440, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -118,6 +110,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 609c1f7033ee9b143bd3d26e0f3d1440, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 609c1f7033ee9b143bd3d26e0f3d1440, type: 3}
+      propertyPath: m_Name
+      value: GroundBig02_Collid
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 609c1f7033ee9b143bd3d26e0f3d1440, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2300000, guid: 609c1f7033ee9b143bd3d26e0f3d1440, type: 3}
@@ -141,10 +141,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 642006709048485805}
     m_Modifications:
-    - target: {fileID: 100000, guid: 2061f46e2f5e77043851c4d4d5219337, type: 3}
-      propertyPath: m_Name
-      value: GroundBig02
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2061f46e2f5e77043851c4d4d5219337, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -188,6 +184,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 2061f46e2f5e77043851c4d4d5219337, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2061f46e2f5e77043851c4d4d5219337, type: 3}
+      propertyPath: m_Name
+      value: GroundBig02
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 2061f46e2f5e77043851c4d4d5219337, type: 3}
       propertyPath: m_Materials.Array.data[0]

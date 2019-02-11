@@ -67,14 +67,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1999345697518768504}
     m_Modifications:
-    - target: {fileID: 100000, guid: f548d59ea388c844580cd6511238169a, type: 3}
-      propertyPath: m_Name
-      value: GroundRockLedge01_Collid
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: f548d59ea388c844580cd6511238169a, type: 3}
-      propertyPath: m_TagString
-      value: JumpingArea
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f548d59ea388c844580cd6511238169a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -118,6 +110,18 @@ PrefabInstance:
     - target: {fileID: 400000, guid: f548d59ea388c844580cd6511238169a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: f548d59ea388c844580cd6511238169a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.0543
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f548d59ea388c844580cd6511238169a, type: 3}
+      propertyPath: m_Name
+      value: GroundRockLedge01_Collid
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f548d59ea388c844580cd6511238169a, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2300000, guid: f548d59ea388c844580cd6511238169a, type: 3}

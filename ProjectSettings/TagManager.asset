@@ -26,6 +26,9 @@ TagManager:
   - JumpingArea
   - WallJumpingArea
   - Destuctable
+  - Fire
+  - CoinFinal
+  - AirCollider
   layers:
   - Default
   - TransparentFX

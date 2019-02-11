@@ -7,15 +7,15 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     public Player player;
-    public Text scoreText;
-    private int score;
+    //public Text scoreText;
+    //private int score;
     private float restartTimer = 3f;
     public float gravity = 9.81f;
 
     // Start is called before the first frame update
     void Start()
     {
-        player.onCollectCoin = OnCollectCoin;
+      //  player.onCollectCoin = OnCollectCoin;
 
 
 
@@ -40,10 +40,10 @@ public class GameController : MonoBehaviour
         
     }
 
-    void OnCollectCoin()
+   /* void OnCollectCoin()
     {
         score++;
         scoreText.text = "Score: " + score;
     }
-
+    */
 }
