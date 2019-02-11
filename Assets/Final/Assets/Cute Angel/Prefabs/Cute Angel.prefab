@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &4652189979007298037
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1076826317402157214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f512fdc5193a443449ffe3f5f955770f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 1076826317402157214}
 --- !u!114 &1099097434141758630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27,6 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   model: {fileID: 1076826317402157214}
   rotatingSpeed: 300
+--- !u!114 &4652189979007298037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1076826317402157214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f512fdc5193a443449ffe3f5f955770f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1076826317402157214}
 --- !u!1 &1076826317664246847
 GameObject:
   m_ObjectHideFlags: 0
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 2372742601930776884}
   m_Layer: 0
   m_Name: Cute Angel
-  m_TagString: Coin
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70,7 +70,7 @@ BoxCollider:
   m_GameObject: {fileID: 1076826317664246847}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1.3152888, y: 0.9140127, z: 1}
   m_Center: {x: -0.0072107315, y: 0.39101613, z: 0}
@@ -101,6 +101,10 @@ PrefabInstance:
     - target: {fileID: 1930088383187364, guid: 9d4cd3d64af004d40b03f24269811b96, type: 3}
       propertyPath: m_Name
       value: Cute Angel Yellow
+      objectReference: {fileID: 0}
+    - target: {fileID: 1930088383187364, guid: 9d4cd3d64af004d40b03f24269811b96, type: 3}
+      propertyPath: m_TagString
+      value: Coin
       objectReference: {fileID: 0}
     - target: {fileID: 4671552837571748, guid: 9d4cd3d64af004d40b03f24269811b96, type: 3}
       propertyPath: m_LocalPosition.x
@@ -306,6 +310,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7034370326086124402, guid: d772479fec85b794585f58c424b667c9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7034370326086124402, guid: d772479fec85b794585f58c424b667c9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 7034370326086124402, guid: d772479fec85b794585f58c424b667c9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.09
+      objectReference: {fileID: 0}
     - target: {fileID: 1757625338248419870, guid: d772479fec85b794585f58c424b667c9,
         type: 3}
       propertyPath: prewarm
@@ -335,21 +354,6 @@ PrefabInstance:
         type: 3}
       propertyPath: InitialModule.startSize.minScalar
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7034370326086124402, guid: d772479fec85b794585f58c424b667c9,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.11
-      objectReference: {fileID: 0}
-    - target: {fileID: 7034370326086124402, guid: d772479fec85b794585f58c424b667c9,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 7034370326086124402, guid: d772479fec85b794585f58c424b667c9,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.09
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d772479fec85b794585f58c424b667c9, type: 3}

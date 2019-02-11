@@ -11,15 +11,16 @@ public class GameController : MonoBehaviour
     private int score;
     private float restartTimer = 3f;
     public float gravity = 9.81f;
+    public static GameController instance = null;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        player.onCollectCoin = OnCollectCoin;
+    //void Start()
+    //{
+    //    player.onCollectCoin = OnCollectCoin;
 
 
 
-    }
+    //}
      
     // Update is called once per frame
     void Update()
@@ -40,10 +41,10 @@ public class GameController : MonoBehaviour
         
     }
 
-    void OnCollectCoin()
-    {
-        score++;
-        scoreText.text = "Score: " + score;
-    }
+   //public void OnCollectCoin()
+   // {
+   //     score += 1;
+   //     scoreText.text = "Score: " + score;
+   // }
 
 }

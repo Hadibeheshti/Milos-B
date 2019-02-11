@@ -26,6 +26,8 @@ TagManager:
   - JumpingArea
   - WallJumpingArea
   - Destuctable
+  - Fire
+  - GameManager
   layers:
   - Default
   - TransparentFX
