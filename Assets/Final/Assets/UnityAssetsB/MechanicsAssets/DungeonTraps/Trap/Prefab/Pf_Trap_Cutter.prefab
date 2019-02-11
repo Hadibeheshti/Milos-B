@@ -62,9 +62,10 @@ GameObject:
   - component: {fileID: 3354862}
   - component: {fileID: 2354862}
   - component: {fileID: 6554864}
+  - component: {fileID: 7869336752059151327}
   m_Layer: 0
   m_Name: Cutter
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,11 +137,24 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 154862}
   m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3298175, y: 0.0704397, z: 1.2903379}
+  m_Center: {x: 0.0010502338, y: 0.38143635, z: 0.0015608668}
+--- !u!65 &7869336752059151327
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154862}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.2, z: 1}
-  m_Center: {x: 0, y: 0.4, z: 0}
+  m_Size: {x: 1, y: 0.06922155, z: 1}
+  m_Center: {x: 6.1590268e-24, y: 0.036291685, z: -3.5955515e-19}
 --- !u!1 &154864
 GameObject:
   m_ObjectHideFlags: 0
