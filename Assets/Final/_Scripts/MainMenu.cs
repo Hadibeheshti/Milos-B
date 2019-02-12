@@ -8,7 +8,8 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame ()
     {
-        SceneManager.LoadScene("Gate_1"); // bestimmtes level nach namen laden
+        SceneManager.LoadScene("GoldMaster_E");
+        Time.timeScale = 1f;// bestimmtes level nach namen laden
         //SceneManager.LoadScene(1) level 1 auf index laden
         //SceneManager.GetActiveScene().buildIndex + 1); nächstes lvl laden
     }

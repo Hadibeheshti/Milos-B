@@ -137,12 +137,14 @@ public class Player : MonoBehaviour
        
 
 
+
         if (h > 0f)
-            
+
         {
             towardsY = 180f;
         }
-        else if (h < 0f) {
+        else if (h < 0f)
+        {
 
 
             towardsY = 0f;

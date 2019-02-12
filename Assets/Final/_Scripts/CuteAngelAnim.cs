@@ -11,6 +11,7 @@ public class CuteAngelAnim : MonoBehaviour
     public GameObject Stoned;
     public float speed =3f ;
     private bool movingUp = false;
+   
 
 
     public Animator AngelAnimator;
@@ -18,6 +19,7 @@ public class CuteAngelAnim : MonoBehaviour
     void Start()
     {
         AngelAnimator = GetComponentInChildren<Animator>();
+       // myCollider = GetComponent<Collider>();
         LifeAngelModel.SetActive(false);
         Stoned.SetActive(true);
 
@@ -29,6 +31,7 @@ public class CuteAngelAnim : MonoBehaviour
         if (movingUp == true)
         {
             ModelToUp.transform.position += new Vector3(0.0f, 1.0f * Time.deltaTime, 0.0f);
+            
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -36,24 +39,26 @@ public class CuteAngelAnim : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
 
-            Live();
+            AngelAnimator.SetBool("Live", true);
             Stoned.SetActive(false);
             LifeAngelModel.SetActive(true);
+            GetComponent<Collider>().enabled = false;
             movingUp = true;
-
+           // Destroy(ModelToUp, 2f);
+            
 
         }
 
 
     }
 
-    private void Live()
-    {
+    //private void Live()
+    //{
 
-        AngelAnimator.SetBool("Live", true);
+    //    AngelAnimator.SetBool("Live", true);
 
 
-    }
+    //}
 
 
 
