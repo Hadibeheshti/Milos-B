@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 1076826317664246844}
   - component: {fileID: 1076826317664246845}
   - component: {fileID: 2372742601930776884}
-  - component: {fileID: 8710881119830585779}
+  - component: {fileID: 1900541429061509200}
   m_Layer: 0
   m_Name: Cute Angel
   m_TagString: CoinFinal
@@ -73,8 +73,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.3152888, y: 0.9140127, z: 1}
-  m_Center: {x: -0.0072107315, y: 0.39101613, z: 0}
+  m_Size: {x: 3.0350783, y: 1.2010958, z: 1}
+  m_Center: {x: 0.0076225996, y: 0.5345577, z: 0}
 --- !u!114 &2372742601930776884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,10 +91,10 @@ MonoBehaviour:
   LifeAngelModel: {fileID: 1078467744716597313}
   Stoned: {fileID: 1076826317402157214}
   speed: 2
-  myAudioS: {fileID: 8710881119830585779}
-  myClip: {fileID: 8300000, guid: be58a6c9c6f62704eb5e427e3d578b15, type: 3}
+  myAudioS: {fileID: 1900541429061509200}
+  myClip: {fileID: 8300000, guid: a109047452ad66b4c9055a4b4c00beff, type: 3}
   AngelAnimator: {fileID: 1127558621061124651}
---- !u!82 &8710881119830585779
+--- !u!82 &1900541429061509200
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,7 +115,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 428.7
+  MaxDistance: 50
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
@@ -180,7 +180,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -244,6 +244,11 @@ PrefabInstance:
     - target: {fileID: 4671552837571748, guid: 9d4cd3d64af004d40b03f24269811b96, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 137474318951898912, guid: 9d4cd3d64af004d40b03f24269811b96,
+        type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d4cd3d64af004d40b03f24269811b96, type: 3}
@@ -349,6 +354,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sparkle
+      objectReference: {fileID: 0}
+    - target: {fileID: 2558582181862213752, guid: d772479fec85b794585f58c424b667c9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 448033791743144689, guid: d772479fec85b794585f58c424b667c9,
         type: 3}

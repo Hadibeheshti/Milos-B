@@ -3,12 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class DeathMenu : MonoBehaviour
 {
 
     public static bool GameIsPaused = false;
     public GameObject deathMenuUI;
+ 
 
+
+    private void Start()
+    {
+      
+
+
+    }
     // Update is called once per frame
     void Update()
     {
@@ -31,6 +40,7 @@ public class DeathMenu : MonoBehaviour
         deathMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
+        
     }
 
 
@@ -39,6 +49,9 @@ public class DeathMenu : MonoBehaviour
         deathMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
+        
+        
+
     }
     public void LoadMenu()
     {

@@ -15,6 +15,7 @@ public class ChSfx : MonoBehaviour {
     public AudioClip RopeS;
     public AudioClip AngryFlowerS;
     public AudioClip AngelS;
+    public AudioClip gameOver;
 
 
 
@@ -127,9 +128,10 @@ void JumpSound () {
 
 void DieSound() {
 
-gameObject.GetComponent<AudioSource>().PlayOneShot (sndDie);
- 
- sndDie = null;
+        gameObject.GetComponent<AudioSource>().PlayOneShot(sndDie);
+gameObject.GetComponent<AudioSource>().PlayOneShot(gameOver);
+
+        sndDie = null;
  
  sndJump = null;
 	
