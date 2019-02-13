@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 1076826317664246844}
   - component: {fileID: 1076826317664246845}
   - component: {fileID: 2372742601930776884}
+  - component: {fileID: 8710881119830585779}
   m_Layer: 0
   m_Name: Cute Angel
   m_TagString: CoinFinal
@@ -90,31 +91,16 @@ MonoBehaviour:
   LifeAngelModel: {fileID: 1078467744716597313}
   Stoned: {fileID: 1076826317402157214}
   speed: 2
+  myAudioS: {fileID: 8710881119830585779}
+  myClip: {fileID: 8300000, guid: be58a6c9c6f62704eb5e427e3d578b15, type: 3}
   AngelAnimator: {fileID: 1127558621061124651}
---- !u!114 &4663642119187693927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1078467744716597313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37cfbea09a2c0ed4d9d53c1a4c253a2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sndDie: {fileID: 0}
-  sndJump: {fileID: 0}
-  RollerStone: {fileID: 0}
-  MiloRunClip: {fileID: 0}
-  FlyingStone: {fileID: 0}
---- !u!82 &6005693751010837965
+--- !u!82 &8710881119830585779
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1078467744716597313}
+  m_GameObject: {fileID: 1076826317664246847}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -129,9 +115,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 428.7
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -164,7 +150,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -194,7 +180,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0

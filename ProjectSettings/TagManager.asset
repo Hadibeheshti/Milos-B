@@ -29,6 +29,9 @@ TagManager:
   - Fire
   - CoinFinal
   - AirCollider
+  - Gate
+  - GateOpen
+  - youWin
   layers:
   - Default
   - TransparentFX

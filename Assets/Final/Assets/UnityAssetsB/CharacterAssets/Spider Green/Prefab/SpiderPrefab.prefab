@@ -19,20 +19,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7616025384977583137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3231983050275174744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c23ca31cd91d3994081da8cefc634106, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
-  movementAmplitude: 4
 --- !u!65 &7138855618617754475
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46,6 +32,33 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.020000003, y: 0.013759172, z: 0.018090174}
   m_Center: {x: 0.0000000013969839, y: 0.006879586, z: -0.00095491717}
+--- !u!114 &7616025384977583137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3231983050275174744}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c23ca31cd91d3994081da8cefc634106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  movementAmplitude: 4
+--- !u!114 &2074637740099057509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3231983050275174744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fc3692bec1b7cd4dbce699cf794a282, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathMenuUI: {fileID: 0}
 --- !u!1 &3231983050287542602
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,7 +229,7 @@ Transform:
   m_GameObject: {fileID: 3231983050787213580}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.37199017, y: 0.37199, z: 0.37199017}
   m_Children:
   - {fileID: 3231983050287542603}
   m_Father: {fileID: 0}
@@ -278,10 +291,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400108, guid: 8c00db5be83e04b4c88b073e10fba9b9, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400108, guid: 8c00db5be83e04b4c88b073e10fba9b9, type: 3}
       propertyPath: m_LocalScale.y
       value: 1.460265
       objectReference: {fileID: 0}
@@ -289,8 +298,7 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.4602678
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 11100000, guid: 8c00db5be83e04b4c88b073e10fba9b9, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c00db5be83e04b4c88b073e10fba9b9, type: 3}
 --- !u!1 &3231983049655503543 stripped
 GameObject:
@@ -314,6 +322,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 10df705a56465244a92fef05f034164d, type: 3}
       propertyPath: m_Name
       value: SpiderNet
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 10df705a56465244a92fef05f034164d, type: 3}
+      propertyPath: m_TagString
+      value: Monster
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 10df705a56465244a92fef05f034164d, type: 3}
       propertyPath: m_LocalPosition.x

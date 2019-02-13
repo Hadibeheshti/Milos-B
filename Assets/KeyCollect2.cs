@@ -5,8 +5,9 @@ using UnityEngine.UI;
 public class KeyCollect2 : MonoBehaviour
 {
     public GameObject[] Keys = new GameObject[4];
-   
-    
+    public GameObject TotemEarth;
+
+
 
     private void Start()
     {
@@ -21,7 +22,7 @@ public class KeyCollect2 : MonoBehaviour
     // Start is called before the first frame update
     void Update()
     {
-       
+
 
     }
     void OnTriggerEnter(Collider other)
@@ -30,6 +31,7 @@ public class KeyCollect2 : MonoBehaviour
         {
             if (transform.tag == "Schlüsselfragment2")
             {
+                TotemEarth.SetActive(true);
                 Keys[1].SetActive(true);
                 Destroy(this.gameObject);
 

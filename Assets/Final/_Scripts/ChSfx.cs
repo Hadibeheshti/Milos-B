@@ -14,6 +14,7 @@ public class ChSfx : MonoBehaviour {
     public AudioClip NeedleRein;
     public AudioClip RopeS;
     public AudioClip AngryFlowerS;
+    public AudioClip AngelS;
 
 
 
@@ -41,6 +42,14 @@ public class ChSfx : MonoBehaviour {
 
         gameObject.GetComponent<AudioSource>().PlayOneShot(AngryFlowerS);
         
+
+    }
+
+    void AngelF()
+    {
+
+        gameObject.GetComponent<AudioSource>().PlayOneShot(AngelS);
+
 
     }
 

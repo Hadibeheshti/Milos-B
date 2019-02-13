@@ -10,6 +10,8 @@ public class CuteAngelAnim : MonoBehaviour
     public GameObject LifeAngelModel;
     public GameObject Stoned;
     public float speed =3f ;
+    public AudioSource myAudioS;
+    public AudioClip myClip;
     private bool movingUp = false;
    
 
@@ -19,6 +21,7 @@ public class CuteAngelAnim : MonoBehaviour
     void Start()
     {
         AngelAnimator = GetComponentInChildren<Animator>();
+        myAudioS = GetComponent<AudioSource>();
        // myCollider = GetComponent<Collider>();
         LifeAngelModel.SetActive(false);
         Stoned.SetActive(true);
@@ -44,8 +47,10 @@ public class CuteAngelAnim : MonoBehaviour
             LifeAngelModel.SetActive(true);
             GetComponent<Collider>().enabled = false;
             movingUp = true;
-           // Destroy(ModelToUp, 2f);
-            
+            myAudioS.clip = myClip;
+            myAudioS.Play();
+            // Destroy(ModelToUp, 2f);
+
 
         }
 

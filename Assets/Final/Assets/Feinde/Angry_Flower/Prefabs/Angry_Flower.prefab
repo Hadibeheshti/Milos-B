@@ -1140,7 +1140,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.71
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1149,7 +1149,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 30
+  MaxDistance: 25
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -1247,6 +1247,7 @@ MonoBehaviour:
   NeedleRein: {fileID: 0}
   RopeS: {fileID: 0}
   AngryFlowerS: {fileID: 8300000, guid: 066293ff03f56344ba83d74a41143130, type: 3}
+  AngelS: {fileID: 0}
 --- !u!1 &185000
 GameObject:
   m_ObjectHideFlags: 0

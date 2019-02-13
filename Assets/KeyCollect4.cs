@@ -5,7 +5,8 @@ using UnityEngine.UI;
 public class KeyCollect4 : MonoBehaviour
 {
     public GameObject[] Keys = new GameObject[4];
-    
+    public GameObject TotemWater;
+
 
     private void Start()
     {
@@ -21,7 +22,7 @@ public class KeyCollect4 : MonoBehaviour
     void Update()
     {
 
-        
+
 
     }
     void OnTriggerEnter(Collider other)
@@ -30,6 +31,7 @@ public class KeyCollect4 : MonoBehaviour
         {
             if (transform.tag == "Schlüsselfragment4")
             {
+                TotemWater.SetActive(true);
                 Keys[3].SetActive(true);
                 Destroy(this.gameObject);
 

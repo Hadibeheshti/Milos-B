@@ -336,3 +336,5 @@ MonoBehaviour:
   HammerS: {fileID: 0}
   NeedleRaus: {fileID: 8300000, guid: 3dc3dc1cb1caf3d4599d9c8b96cf72c8, type: 3}
   NeedleRein: {fileID: 8300000, guid: d9fc963050cf29d47b2fd11ef7fac2bc, type: 3}
+  RopeS: {fileID: 0}
+  AngryFlowerS: {fileID: 0}

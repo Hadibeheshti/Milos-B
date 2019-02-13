@@ -5,7 +5,8 @@ using UnityEngine.UI;
 public class KeyCollect3 : MonoBehaviour
 {
     public GameObject[] Keys = new GameObject[4];
-    
+    public GameObject TotemFire;
+
 
     private void Start()
     {
@@ -20,7 +21,7 @@ public class KeyCollect3 : MonoBehaviour
     // Start is called before the first frame update
     void Update()
     {
-      
+
     }
     void OnTriggerEnter(Collider other)
     {
@@ -28,6 +29,7 @@ public class KeyCollect3 : MonoBehaviour
         {
             if (transform.tag == "Schlüsselfragment3")
             {
+                TotemFire.SetActive(true);
                 Keys[2].SetActive(true);
                 Destroy(this.gameObject);
 

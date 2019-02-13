@@ -5,7 +5,8 @@ using UnityEngine.UI;
 public class KeyCollect1 : MonoBehaviour
 {
     public GameObject[] Keys = new GameObject[4];
-    
+    public GameObject TotemAir;
+
     private void Start()
     {
         GameObject temp = GameObject.Find("AnchorTopRight");
@@ -19,7 +20,7 @@ public class KeyCollect1 : MonoBehaviour
     // Start is called before the first frame update
     void Update()
     {
-       
+
 
 
     }
@@ -29,6 +30,7 @@ public class KeyCollect1 : MonoBehaviour
         {
             if (transform.tag == "Schlüsselfragment1")
             {
+                TotemAir.SetActive(true);
                 Keys[0].SetActive(true);
                 Destroy(this.gameObject);
 
