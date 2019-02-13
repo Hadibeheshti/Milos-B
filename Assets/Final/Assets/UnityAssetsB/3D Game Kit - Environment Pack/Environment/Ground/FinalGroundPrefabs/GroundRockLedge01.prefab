@@ -8,6 +8,20 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 877938108957827382}
   m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: f548d59ea388c844580cd6511238169a, type: 3}
+--- !u!64 &6106134968772542870
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 877938108957827382}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -53,14 +67,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1999345697518768504}
     m_Modifications:
-    - target: {fileID: 100000, guid: f548d59ea388c844580cd6511238169a, type: 3}
-      propertyPath: m_Name
-      value: GroundRockLedge01_Collid
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: f548d59ea388c844580cd6511238169a, type: 3}
-      propertyPath: m_TagString
-      value: JumpingArea
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f548d59ea388c844580cd6511238169a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -104,6 +110,18 @@ PrefabInstance:
     - target: {fileID: 400000, guid: f548d59ea388c844580cd6511238169a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: f548d59ea388c844580cd6511238169a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.0543
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f548d59ea388c844580cd6511238169a, type: 3}
+      propertyPath: m_Name
+      value: GroundRockLedge01_Collid
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f548d59ea388c844580cd6511238169a, type: 3}
+      propertyPath: m_TagString
+      value: JumpingArea
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2300000, guid: f548d59ea388c844580cd6511238169a, type: 3}

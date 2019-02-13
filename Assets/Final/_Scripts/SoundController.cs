@@ -7,15 +7,12 @@ public class SoundController : MonoBehaviour {
     public AudioClip MainTheme;
     public AudioClip HomeBG;
 	
-
-
-
-
 	public AudioSource myAudiosrc;
 
 
-	// Use this for initialization
-	void Start () {
+
+    // Use this for initialization
+    void Start () {
 		
 		DontDestroyOnLoad(transform.gameObject);
 
@@ -25,8 +22,10 @@ public class SoundController : MonoBehaviour {
         myAudiosrc.clip = HomeBG;
 
         myAudiosrc.Play ();
-	}
+       
 	
 
+
+}
 
 }

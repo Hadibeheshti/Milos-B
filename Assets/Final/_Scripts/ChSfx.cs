@@ -7,7 +7,17 @@ public class ChSfx : MonoBehaviour {
 	public AudioClip sndJump;
     public AudioClip RollerStone;
     public AudioClip MiloRunClip;
-  
+    public AudioClip FlyingStone;
+    public AudioClip CuteAngel;
+    public AudioClip HammerS;
+    public AudioClip NeedleRaus;
+    public AudioClip NeedleRein;
+    public AudioClip RopeS;
+    public AudioClip AngryFlowerS;
+    public AudioClip AngelS;
+
+
+
     //AudioSource
     AudioSource audioSource;
 
@@ -27,7 +37,42 @@ public class ChSfx : MonoBehaviour {
 				
 		}
 
+    void AngryFlowerF()
+    {
 
+        gameObject.GetComponent<AudioSource>().PlayOneShot(AngryFlowerS);
+        
+
+    }
+
+    void AngelF()
+    {
+
+        gameObject.GetComponent<AudioSource>().PlayOneShot(AngelS);
+
+
+    }
+
+    void NeedleRausF()
+    {
+
+        gameObject.GetComponent<AudioSource>().PlayOneShot(NeedleRaus);
+
+    }
+
+    void RopeF()
+    {
+
+        gameObject.GetComponent<AudioSource>().PlayOneShot(RopeS);
+
+    }
+
+    void NeedleReinF()
+    {
+
+        gameObject.GetComponent<AudioSource>().PlayOneShot(NeedleRein);
+
+    }
 
     void MiloRunFunc()
     {
@@ -36,7 +81,27 @@ public class ChSfx : MonoBehaviour {
 
     }
 
-   
+    void HammerF()
+    {
+
+        gameObject.GetComponent<AudioSource>().PlayOneShot(HammerS);
+
+    }
+
+
+    void FlySton()
+    {
+
+        gameObject.GetComponent<AudioSource>().PlayOneShot(FlyingStone);
+
+    }
+
+    void CuteF()
+    {
+
+        gameObject.GetComponent<AudioSource>().PlayOneShot(CuteAngel);
+
+    }
 
 
 

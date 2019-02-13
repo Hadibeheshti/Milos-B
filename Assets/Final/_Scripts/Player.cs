@@ -9,9 +9,16 @@ public class Player : MonoBehaviour
     public float distanceGround;
     public bool isGrounded = false;
 
+    public GameObject gate;
+    public GameObject gateclosed;
+    public GameObject youWin;
+    public GameObject gateopen;
+    //public GameObject winScreenUI;
+
     [Header("Milo Model")]
     //The model to rotate.
     public GameObject model;
+
 
     [Header("Animator")]
     public Animator anim;
@@ -65,14 +72,19 @@ public class Player : MonoBehaviour
     private bool onSpeedAreaRight = false;
     private bool onJumpLongBlock = false;
     private bool dead = false;
-   // private bool facingRight = true;
+    private bool k1 = false;
+    private bool k2 = false;
+    private bool k3 = false;
+    private bool k4 = false;
+    private bool gateOpen = false;
+    // private bool facingRight = true;
     // for model Rotation.  
     private float towardsY = 0f;
 
     //private bool onGround = false;
 
     private Rigidbody rigid;
-    
+
 
 
 
@@ -93,6 +105,7 @@ public class Player : MonoBehaviour
 
         distanceGround = GetComponent<Collider>().bounds.extents.y;
 
+
     }
 
     private void FixedUpdate()
@@ -100,21 +113,23 @@ public class Player : MonoBehaviour
         if (!Physics.Raycast(transform.position, -Vector3.up, distanceGround + 0.1f))
         {
             isGrounded = false;
-          
+
             anim.SetBool("grounded", false);
 
-        } else  {
+        }
+        else
+        {
 
-                isGrounded = true;
+            isGrounded = true;
 
             anim.SetBool("grounded", true);
-          
 
 
-            }
-            
-        
-       
+
+        }
+
+
+
     }
 
 
@@ -131,18 +146,22 @@ public class Player : MonoBehaviour
         float v = Input.GetAxis("Vertical");
 
         anim.SetFloat("forward", Mathf.Abs(h));
-         
+
 
         //Der Winkel zu dem sich die Figure um die eigene Achse  (=Y) drehen soll.
-       
+
+
+
+
 
 
         if (h > 0f)
-            
+
         {
             towardsY = 180f;
         }
-        else if (h < 0f) {
+        else if (h < 0f)
+        {
 
 
             towardsY = 0f;
@@ -178,17 +197,17 @@ public class Player : MonoBehaviour
         //Jumping Animation.
         if (Input.GetMouseButton(0) || Input.GetKey("space"))
         {
-          //  anim.SetBool("onAir", true);
+            //  anim.SetBool("onAir", true);
 
         }
 
         if (Input.GetMouseButtonUp(0) || Input.GetKeyUp("space"))
         {
-           // anim.SetBool("onAir", false);
+            // anim.SetBool("onAir", false);
 
         }
 
-       
+
 
 
         //Accelerate the Player.
@@ -221,9 +240,9 @@ public class Player : MonoBehaviour
             if (canJump)
             {
                 Jump();
-                
+
             }
-           
+
 
 
             //Check for Unpause.
@@ -278,32 +297,32 @@ public class Player : MonoBehaviour
     private void MoveHorizontallyForward()
     {
 
-        
+
         GetComponent<Rigidbody>().velocity = new Vector3(
 
             paused ? 0 : speed,
             GetComponent<Rigidbody>().velocity.y,
             GetComponent<Rigidbody>().velocity.z);
-          //  anim.SetBool("run", true);
-       
+        //  anim.SetBool("run", true);
+
     }
-    
+
     //Move Horizontally.
     private void MoveHorizontallyBackWard()
     {
 
-      
+
         GetComponent<Rigidbody>().velocity = new Vector3(
 
             paused ? 0 : -speed,
             GetComponent<Rigidbody>().velocity.y,
             GetComponent<Rigidbody>().velocity.z);
-           // anim.SetBool("run", true);
+        // anim.SetBool("run", true);
     }
 
     public void StopHorizontally()
     {
-       // anim.SetBool("run", false);
+        // anim.SetBool("run", false);
 
     }
 
@@ -318,33 +337,53 @@ public class Player : MonoBehaviour
         anim.SetBool("onAir", false);
 
     }
-    
+
     public void Pause()
     {
         paused = true;
 
     }
-    
+
     private void OnTriggerEnter(Collider otherCollider)
     {
-     
-            if (otherCollider.gameObject.tag == "Monster")
-            {
+
+        if (otherCollider.gameObject.tag == "Monster")
+        {
 
             Kill();
 
 
 
 
-              //  Coin.instance.GameOver();
+            //  Coin.instance.GameOver();
 
 
 
 
         }
 
-            // Collect coins.
-            if (otherCollider.transform.GetComponent<Coin>() != null)
+        if (otherCollider.gameObject.tag == "Schlüsselfragment1")
+        { k1 = true; GateOpenCheck(); }
+        if (otherCollider.gameObject.tag == "Schlüsselfragment2")
+        { k2 = true; GateOpenCheck(); }
+        if (otherCollider.gameObject.tag == "Schlüsselfragment3")
+        { k3 = true; GateOpenCheck(); }
+        if (otherCollider.gameObject.tag == "Schlüsselfragment4")
+        { k4 = true; GateOpenCheck(); }
+
+        if (otherCollider.gameObject.tag == "Gate")
+        {
+            StartCoroutine(ReminderKeyFragments());
+            gateclosed.SetActive(true);
+        }
+        if (otherCollider.gameObject.tag == "GateOpen")
+        {
+            //StartCoroutine(WinTimer());
+            //StartCoroutine(WinTimer2());
+            youWin.SetActive(true);
+        }
+        // Collect coins.
+        if (otherCollider.transform.GetComponent<Coin>() != null)
         {
             Destroy(otherCollider.gameObject);
             onCollectCoin();
@@ -381,11 +420,47 @@ public class Player : MonoBehaviour
                 Kill();
             }
 
-         }
+        }
 
 
     }
+    IEnumerator ReminderKeyFragments()
+    {
+        yield return new WaitForSeconds(4);
+        gateclosed.SetActive(false);
+    }
+    //IEnumerator WinTimer()
+    //{
 
+    //    yield return new WaitForSeconds(8);
+    //    youWin.SetActive(false);
+    //    Debug.Log("youWin aus");
+
+    //}
+    //IEnumerator WinTimer2()
+    //{
+
+    //    yield return new WaitForSeconds(8);
+    //    winScreenUI.SetActive(true);
+    //    Debug.Log("winscreen ein");
+    //}
+
+
+
+    private void GateOpenCheck()
+    {
+        if (k1 && k2 && k3 && k4)
+        {
+            gateOpen = true;
+        }
+
+        if (gateOpen)
+        {
+            print("gate is open!");
+            gate.SetActive(false);
+            gateopen.SetActive(true);
+        }
+    }
     private void OnTriggerStay(Collider otherCollider)
     {
 
@@ -396,9 +471,9 @@ public class Player : MonoBehaviour
             jumping = false;
             jumpingSpeed = normalJumpingSpeed;
             jumpingTimer = 0f;
-           
 
-            
+
+
 
         }
 
@@ -419,8 +494,8 @@ public class Player : MonoBehaviour
 
             canWallJump = false;
 
-           
-            
+
+
         }
 
         if (otherCollider.GetComponent<SpeedArea>() != null)
@@ -458,9 +533,9 @@ public class Player : MonoBehaviour
 
     }
 
-   
 
-        public void Jump(bool forced = false)
+
+    public void Jump(bool forced = false)
     {
 
 
@@ -468,19 +543,19 @@ public class Player : MonoBehaviour
         jumping = true;
         if (forced)
         {
-           /* RaycastHit hitInfo;
-            Debug.DrawRay(transform.position + (Vector3.up * 0.1f), Vector3.down, Color.cyan, myRaycastLength);
-            onGround = Physics.Raycast(transform.position + (Vector3.up * 0.05f), Vector3.down, out hitInfo, myRaycastLength);
-            anim.SetBool("grounded", onGround);
+            /* RaycastHit hitInfo;
+             Debug.DrawRay(transform.position + (Vector3.up * 0.1f), Vector3.down, Color.cyan, myRaycastLength);
+             onGround = Physics.Raycast(transform.position + (Vector3.up * 0.05f), Vector3.down, out hitInfo, myRaycastLength);
+             anim.SetBool("grounded", onGround);
 
 
-            if (Input.GetAxis("Jump") > 0f && onGround) */
+             if (Input.GetAxis("Jump") > 0f && onGround) */
 
-                GetComponent<Rigidbody>().velocity = new Vector3(
+            GetComponent<Rigidbody>().velocity = new Vector3(
 
-                 GetComponent<Rigidbody>().velocity.x,
-                 jumpingSpeed,
-                 GetComponent<Rigidbody>().velocity.z);
+             GetComponent<Rigidbody>().velocity.x,
+             jumpingSpeed,
+             GetComponent<Rigidbody>().velocity.z);
 
 
 

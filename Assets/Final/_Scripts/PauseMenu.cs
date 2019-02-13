@@ -39,7 +39,7 @@ public class PauseMenu : MonoBehaviour
     }
     public void LoadMenu()
     {
-        SceneManager.LoadScene("Menu"); //harcode, plx fix to variable as seen in main menu
+        SceneManager.LoadScene("Menu_1"); //harcode, plx fix to variable as seen in main menu
     }
     public void QuitGame()
     {
