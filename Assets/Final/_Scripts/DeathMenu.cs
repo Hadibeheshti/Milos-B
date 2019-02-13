@@ -27,7 +27,7 @@ public class DeathMenu : MonoBehaviour
     }
     public void PlayAgain()
     {
-        SceneManager.LoadScene("PaulG2");
+        SceneManager.LoadScene("GoldMaster_E");
         deathMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
@@ -42,7 +42,7 @@ public class DeathMenu : MonoBehaviour
     }
     public void LoadMenu()
     {
-        SceneManager.LoadScene("Menu"); //harcode, plx fix to variable as seen in main menu
+        SceneManager.LoadScene("Menu_1"); //harcode, plx fix to variable as seen in main menu
     }
     public void QuitGame()
     {

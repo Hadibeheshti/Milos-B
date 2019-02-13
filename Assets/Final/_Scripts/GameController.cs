@@ -24,7 +24,7 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.Dead)
+      /*  if (player.Dead)
         {
             restartTimer -= Time.deltaTime;
             if (restartTimer <= 0f)
@@ -34,7 +34,7 @@ public class GameController : MonoBehaviour
             }
 
         }
-
+        */
         Physics.gravity = new Vector3(0, -gravity, 0);
 
         
