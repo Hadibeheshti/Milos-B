@@ -14,7 +14,7 @@ public class SoundController : MonoBehaviour {
     // Use this for initialization
     void Start () {
 		
-		DontDestroyOnLoad(transform.gameObject);
+		//DontDestroyOnLoad(transform.gameObject);
 
 
 
